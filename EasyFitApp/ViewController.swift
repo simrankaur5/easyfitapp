@@ -10,8 +10,21 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseUI
+import FBSDKLoginKit
+import FBSDKCoreKit
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
+        
+        
+    }
+    
 
-class ViewController: UIViewController {
+    
+
+    
+  
+    
     
     @IBOutlet weak var loginButton: UIButton!
     
@@ -25,8 +38,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let facebookLogin = FBSDKLoginButton()
+        view.addSubview(facebookLogin)
+        facebookLogin.center = self.view.center;
+        facebookLogin.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
+
+    
     func createAlert(title:String , message:String ){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
@@ -35,8 +54,20 @@ class ViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    @IBAction func registerPressed(_ sender: Any) {
+
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if let error = error {
+            self.createAlert(title: "Error", message: error.localizedDescription)
+        }
+        else{
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            self.performSegue(withIdentifier: "goHome", sender: self)
+        }
+    }
+
+   
+        func registerPressed(_ sender: Any) {
       if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
       {
         if pass == confirmPass{
@@ -71,7 +102,7 @@ class ViewController: UIViewController {
     }
     
 
-    @IBAction func LoginTapped(_ sender: UIButton) {
+        func LoginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let pass = passwordTextField.text
         {
             Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
@@ -90,4 +121,5 @@ class ViewController: UIViewController {
         }
 
 
+}
 }

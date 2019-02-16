@@ -6,7 +6,9 @@ target 'EasyFitApp' do
   use_frameworks!
 
   # Pods for EasyFitApp
-  pod 'Firebase/Core'
-pod 'FirebaseUI/Auth'
-
+  	pod 'Firebase/Core'
+	pod 'FirebaseUI/Auth'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKCoreKit'
+	pod 'FBSDKLoginKit'
 end

@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseUI
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
@@ -26,21 +27,39 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    func createAlert(title:String , message:String ){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func registerPressed(_ sender: Any) {
       if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
       {
         if pass == confirmPass{
         
-        
-                Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+            
+            
+                 Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+
                     
                     if user != nil{
+                        
                         self.performSegue(withIdentifier: "regToLogin", sender: self)
                         
                     }
-                    else{
-                        self.createAlert(title: "Error", message: "error")
+                    if let error = error {
+                        self.createAlert(title: "Error", message: error.localizedDescription)
+                        
                     }
+                    
+                    
+                    
+                    
+                    
                 }
         }
         else{
@@ -51,15 +70,7 @@ class ViewController: UIViewController {
         
     }
     
-    func createAlert(title:String , message:String ){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
-            alert.dismiss(animated:true, completion:nil)
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+
     @IBAction func LoginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let pass = passwordTextField.text
         {
@@ -69,9 +80,9 @@ class ViewController: UIViewController {
                     self.performSegue(withIdentifier:
                         "goHome", sender: self)
                 }
-                else {
-                    //error check error and show message
-                    self.createAlert(title: "Error", message: "Error")
+                if let error = error {
+                    self.createAlert(title: "Error", message: error.localizedDescription)
+                    
                 }
             }
         }

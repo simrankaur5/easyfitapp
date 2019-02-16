@@ -35,11 +35,11 @@ class ViewController: UIViewController {
                 Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                     
                     if user != nil{
-                        self.performSegue(withIdentifier: "goHome", sender: self)
+                        self.performSegue(withIdentifier: "regToLogin", sender: self)
                         
                     }
                     else{
-                        self.createAlert(title: "Error", message: "Error")
+                        self.createAlert(title: "Error", message: "error")
                     }
                 }
         }

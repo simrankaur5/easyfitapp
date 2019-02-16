@@ -66,7 +66,7 @@
                                     <color key="titleColor" red="0.01448710607" green="0.36298803610000002" blue="0.37711421029999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="66j-bS-0rF" kind="presentation" id="yoZ-nS-wAi"/>
+                                    <segue destination="66j-bS-0rF" kind="presentation" identifier="goLogin" id="yoZ-nS-wAi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -184,6 +184,7 @@
                         <outlet property="registerConfirmPasswordTextField" destination="9dz-2W-Z5l" id="NhO-67-rg0"/>
                         <outlet property="registerEmailTextField" destination="DKc-ly-wuN" id="4Rv-OO-DWf"/>
                         <outlet property="registerPasswordTextField" destination="6Dl-zQ-GVM" id="Ece-8r-UJh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="regToLogin" id="EOn-ox-S6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obw-0z-WXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,4 +223,7 @@
     <resources>
         <image name="ic_account_circle.png" width="60" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EOn-ox-S6B"/>
+    </inferredMetricsTieBreakers>
 </document>

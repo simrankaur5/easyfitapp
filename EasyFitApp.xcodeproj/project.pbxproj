@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
 		90D247B02217536800E7C523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AF2217536800E7C523 /* ViewController.swift */; };
 		90D247B32217536800E7C523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B12217536800E7C523 /* Main.storyboard */; };
 		90D247B52217536800E7C523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B42217536800E7C523 /* Assets.xcassets */; };
 		90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B62217536800E7C523 /* LaunchScreen.storyboard */; };
+		90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D247C3221753E300E7C523 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AA2217536800E7C523 /* EasyFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AD2217536800E7C523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D247AF2217536800E7C523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		90D247B42217536800E7C523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D247B72217536800E7C523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D247B92217536800E7C523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D247C3221753E300E7C523 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5973334DCCFA7085D9155844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		677744F31AEC0ED75B1D9383 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */,
+				F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		90D247A12217536800E7C523 = {
 			isa = PBXGroup;
 			children = (
 				90D247AC2217536800E7C523 /* EasyFitApp */,
 				90D247AB2217536800E7C523 /* Products */,
+				677744F31AEC0ED75B1D9383 /* Pods */,
+				5973334DCCFA7085D9155844 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +87,7 @@
 				90D247B42217536800E7C523 /* Assets.xcassets */,
 				90D247B62217536800E7C523 /* LaunchScreen.storyboard */,
 				90D247B92217536800E7C523 /* Info.plist */,
+				90D247C3221753E300E7C523 /* GoogleService-Info.plist */,
 			);
 			path = EasyFitApp;
 			sourceTree = "<group>";
@@ -71,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D247BC2217536800E7C523 /* Build configuration list for PBXNativeTarget "EasyFitApp" */;
 			buildPhases = (
+				B43F2956E6D53BA07C5DF49C /* [CP] Check Pods Manifest.lock */,
 				90D247A62217536800E7C523 /* Sources */,
 				90D247A72217536800E7C523 /* Frameworks */,
 				90D247A82217536800E7C523 /* Resources */,
+				1D0BDF697893E95EC91C6D69 /* [CP] Embed Pods Frameworks */,
+				7B9FC0B322656835245758B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +154,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
+				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D0BDF697893E95EC91C6D69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B9FC0B322656835245758B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43F2956E6D53BA07C5DF49C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyFitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90D247A62217536800E7C523 /* Sources */ = {
@@ -280,6 +385,7 @@
 		};
 		90D247BD2217536800E7C523 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +404,7 @@
 		};
 		90D247BE2217536800E7C523 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

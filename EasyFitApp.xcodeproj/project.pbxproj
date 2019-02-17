@@ -15,6 +15,11 @@
 		90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B62217536800E7C523 /* LaunchScreen.storyboard */; };
 		90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D247C3221753E300E7C523 /* GoogleService-Info.plist */; };
 		90E97F962218AC6100160841 /* FacebookBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E97F952218AC6100160841 /* FacebookBridge.m */; };
+		90E97F982218D34600160841 /* exercising-clipart-ladies-fitness-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */; };
+		90E97F9F2218D5BF00160841 /* iconfinder_65_171424.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */; };
+		90E97FA12218D68400160841 /* iconfinder_Picture13_3289577.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */; };
+		90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */; };
+		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		90D247C3221753E300E7C523 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90E97F942218AC5900160841 /* EasyFitApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyFitApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		90E97F952218AC6100160841 /* FacebookBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookBridge.m; sourceTree = "<group>"; };
+		90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exercising-clipart-ladies-fitness-5.png"; sourceTree = "<group>"; };
+		90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_65_171424.png; sourceTree = "<group>"; };
+		90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_Picture13_3289577.png; sourceTree = "<group>"; };
+		90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_icons_user_1564534.png; sourceTree = "<group>"; };
+		90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfinder_dinner-fork-knife-restaurant-dish_3722857.png"; sourceTree = "<group>"; };
 		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,12 +98,25 @@
 				90D247AD2217536800E7C523 /* AppDelegate.swift */,
 				90D247AF2217536800E7C523 /* ViewController.swift */,
 				90D247B12217536800E7C523 /* Main.storyboard */,
+				90E97F992218D34F00160841 /* Images */,
 				90D247B42217536800E7C523 /* Assets.xcassets */,
 				90D247B62217536800E7C523 /* LaunchScreen.storyboard */,
 				90D247B92217536800E7C523 /* Info.plist */,
 				90D247C3221753E300E7C523 /* GoogleService-Info.plist */,
 			);
 			path = EasyFitApp;
+			sourceTree = "<group>";
+		};
+		90E97F992218D34F00160841 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
+				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
+				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
+				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
+				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +181,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E97FA12218D68400160841 /* iconfinder_Picture13_3289577.png in Resources */,
+				90E97F9F2218D5BF00160841 /* iconfinder_65_171424.png in Resources */,
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
+				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
+				90E97F982218D34600160841 /* exercising-clipart-ladies-fitness-5.png in Resources */,
+				90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

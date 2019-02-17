@@ -12,20 +12,13 @@ import Firebase
 import FirebaseUI
 import FBSDKLoginKit
 import FBSDKCoreKit
+
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
         
-        
     }
-    
 
-    
-
-    
-  
-    
-    
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -37,11 +30,18 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var registerConfirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let facebookLogin = FBSDKLoginButton()
         view.addSubview(facebookLogin)
-        facebookLogin.center = self.view.center;
         facebookLogin.delegate = self
+        facebookLogin.autoresizesSubviews = true
+        facebookLogin.center = self.view.center
+        
+     
+        
+        
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -119,7 +119,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
         }
+        
 
 
 }
+}
+class homeViewController: UIViewController{
+    
 }

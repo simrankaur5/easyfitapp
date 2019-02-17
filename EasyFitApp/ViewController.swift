@@ -35,8 +35,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         let facebookLogin = FBSDKLoginButton()
         view.addSubview(facebookLogin)
         facebookLogin.delegate = self
-        facebookLogin.autoresizesSubviews = true
-        facebookLogin.center = self.view.center
+//        facebookLogin.center = self.view.center
+        facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
         
      
         

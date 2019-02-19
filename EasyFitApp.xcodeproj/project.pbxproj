@@ -21,6 +21,7 @@
 		90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */; };
 		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 		90E97FA722198D9000160841 /* easyft.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA622198D9000160841 /* easyft.png */; };
+		90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E97FAB221CB4BF00160841 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfinder_dinner-fork-knife-restaurant-dish_3722857.png"; sourceTree = "<group>"; };
 		90E97FA622198D9000160841 /* easyft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easyft.png; sourceTree = "<group>"; };
 		90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyFitApp.entitlements; sourceTree = "<group>"; };
+		90E97FAB221CB4BF00160841 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				90D247AF2217536800E7C523 /* ViewController.swift */,
 				90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */,
 				90D247B12217536800E7C523 /* Main.storyboard */,
+				90E97FAB221CB4BF00160841 /* HomeViewController.swift */,
 				90E97F992218D34F00160841 /* Images */,
 				90D247B42217536800E7C523 /* Assets.xcassets */,
 				90E97FA622198D9000160841 /* easyft.png */,
@@ -295,6 +298,7 @@
 				90E97F962218AC6100160841 /* FacebookBridge.m in Sources */,
 				90D247B02217536800E7C523 /* ViewController.swift in Sources */,
 				90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */,
+				90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

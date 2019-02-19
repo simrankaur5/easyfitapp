@@ -71,7 +71,7 @@
                         <outlet property="emailTextField" destination="C6a-Cy-oit" id="9WQ-Mu-pgf"/>
                         <outlet property="loginButton" destination="BGB-mz-3vj" id="cEH-jb-63k"/>
                         <outlet property="passwordTextField" destination="ryz-lP-1KA" id="0TM-sz-Jwb"/>
-                        <segue destination="Jrg-09-qAx" kind="show" identifier="goHome" id="yrT-Aa-SIu"/>
+                        <segue destination="Jrg-09-qAx" kind="presentation" identifier="goHome" id="yrT-Aa-SIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -193,7 +193,7 @@
         <!--home-->
         <scene sceneID="1I9-Kw-NHw">
             <objects>
-                <viewController storyboardIdentifier="home" title="home" id="Jrg-09-qAx" customClass="homeViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" title="home" id="Jrg-09-qAx" customClass="HomeViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PYR-iJ-S7g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

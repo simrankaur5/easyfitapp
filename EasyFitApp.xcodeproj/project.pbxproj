@@ -96,11 +96,11 @@
 		90D247AC2217536800E7C523 /* EasyFitApp */ = {
 			isa = PBXGroup;
 			children = (
-				90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */,
 				90E97F952218AC6100160841 /* FacebookBridge.m */,
 				90E97F942218AC5900160841 /* EasyFitApp-Bridging-Header.h */,
 				90D247AD2217536800E7C523 /* AppDelegate.swift */,
 				90D247AF2217536800E7C523 /* ViewController.swift */,
+				90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */,
 				90D247B12217536800E7C523 /* Main.storyboard */,
 				90E97F992218D34F00160841 /* Images */,
 				90D247B42217536800E7C523 /* Assets.xcassets */,

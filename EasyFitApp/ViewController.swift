@@ -14,11 +14,70 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    
+
+
+    
+    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
         
         
     }
 
+    @IBAction func loginPressed(_ sender: Any) {
+        if let email = emailTextField.text, let pass = passwordTextField.text
+        {
+            Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
+                if user != nil{
+                    // user found go home screen
+                    self.performSegue(withIdentifier:
+                        "goHome", sender: self)
+                }
+                if let error = error{
+                    self.createAlert(title: "Error", message: error.localizedDescription)
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
+    @IBAction func registerPressed(_ sender: Any) {
+        if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
+        {
+            if pass == confirmPass{
+                
+                
+                
+                Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+                    
+                    
+                    if user != nil{
+                        
+                        self.performSegue(withIdentifier: "regToLogin", sender: self)
+                        
+                    }
+                    if let error = error {
+                        self.createAlert(title: "Error", message: error.localizedDescription)
+                        
+                    }
+                    
+                    
+                    
+                    
+                    
+                }
+            }
+            else{
+                createAlert(title: "Error", message: "Your passwords do no match")
+            }
+        }
+        
+        
+    }
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -42,9 +101,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         
     
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+    }
     
     func createAlert(title:String , message:String ){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -54,76 +112,87 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if let error = error {
-            self.createAlert(title: "Error", message: error.localizedDescription)
-        }
-        else{
-            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            self.performSegue(withIdentifier: "goHome", sender: self)
-        }
-    }
-
-   
-        func registerPressed(_ sender: Any) {
-      if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
-      {
-        if pass == confirmPass{
-        
-            
-            
-                 Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
-
-                    
-                    if user != nil{
-                        
-                        self.performSegue(withIdentifier: "regToLogin", sender: self)
-                        
-                    }
+    func firebaseLogin (_ credential: AuthCredential){
+        if let user = Auth.auth().currentUser {
+            // [START link_credential]
+            user.linkAndRetrieveData(with: credential) { (authResult, error) in
+                // [START_EXCLUDE]
+                
                     if let error = error {
                         self.createAlert(title: "Error", message: error.localizedDescription)
-                        
+                        return
                     }
+                    else{
                     
-                    
-                    
-                    
-                    
+                
+                   self.performSegue(withIdentifier: "goHome", sender: self)
                 }
+                // [END_EXCLUDE]
+            }
+            // [END link_credential]
         }
-        else{
-            createAlert(title: "Error", message: "Your passwords do no match")
+        else {
+            // [START signin_credential]
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                // [START_EXCLUDE silent]
+                
+                    // [END_EXCLUDE]
+                    if let error = error {
+                        // [START_EXCLUDE]
+                        self.createAlert(title: "Error", message: error.localizedDescription)
+                        // [END_EXCLUDE]
+                        return
+                    }
+                    else{
+                           self.performSegue(withIdentifier: "goHome", sender: self)
+                }
+                    // User is signed in
+                    // [START_EXCLUDE]
+                    // Merge prevUser and currentUser accounts and data
+                    // ...
+                    // [END_EXCLUDE]
+                    // [START_EXCLUDE silent]
+                
+                // [END_EXCLUDE]
+            }
+            // [END signin_credential]
         }
-        }
-      
+    }
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+//        if let error = error {
+//            self.createAlert(title: "Error", message: error.localizedDescription)
+//        }
+        let loginManager = FBSDKLoginManager()
+        loginManager.logIn(withReadPermissions: ["email"], from: self, handler: { (result, error) in
+            if let error = error {
+                self.createAlert(title: "Error", message: error.localizedDescription)
+            } else if result!.isCancelled {
+                print("FBLogin cancelled")
+            } else {
+                // [START headless_facebook_auth]
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseLogin(credential)
+             
+         
+                // [END headless_facebook_auth]
+//                Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+               
+            }
+        })
+
+//            let credential = FacebookAuthProvider.credential(withAccessToken: ((FBSDKAccessToken.current().tokenString))!)
+//            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+//            self.performSegue(withIdentifier: "goHome", sender: self)
+            
         
     }
-    
 
-        func LoginTapped(_ sender: UIButton) {
-        if let email = emailTextField.text, let pass = passwordTextField.text
-        {
-            Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
-                if user != nil{
-                    // user found go home screen
-                    self.performSegue(withIdentifier:
-                        "goHome", sender: self)
-                }
-                if let error = error {
-                    self.createAlert(title: "Error", message: error.localizedDescription)
-                    
-                }
-            }
-        }
-        
-        }
         
 
 
 }
-}
+
 class homeViewController: UIViewController{
     
 }
+

@@ -13,7 +13,7 @@
         <!--loginPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="loginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="loginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="EasyFitApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t36-3F-leR"/>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WhT-Bh-udP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" disabledBackground="ic_account_circle.png" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="C6a-Cy-oit">
@@ -147,7 +147,7 @@
                                 </state>
                                 <connections>
                                     <action selector="RegisterTapped:" destination="4Wm-Wi-8hr" eventType="touchUpInside" id="bFT-IK-mgC"/>
-                                    <action selector="registerPressed:" destination="66j-bS-0rF" eventType="touchUpInside" id="7am-Bz-WJr"/>
+                                    <action selector="registerPressed:" destination="66j-bS-0rF" eventType="touchUpInside" id="XDd-fr-kk0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97a-dA-rqu">

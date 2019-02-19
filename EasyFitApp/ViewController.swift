@@ -108,7 +108,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func createAlert(title:String , message:String ){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertContxroller.Style.alert)
         alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated:true, completion:nil)
             

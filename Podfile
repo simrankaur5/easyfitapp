@@ -11,4 +11,5 @@ target 'EasyFitApp' do
     pod 'FBSDKLoginKit'
     pod 'FBSDKCoreKit'
 	pod 'FBSDKLoginKit'
+	pod 'Firebase/Database'
 end

@@ -25,7 +25,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         
     }
-
+    
     @IBAction func loginPressed(_ sender: Any) {
         if let email = emailTextField.text, let pass = passwordTextField.text
         {
@@ -91,11 +91,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        if FBSDKAccessToken.currentAccessTokenIsActive() != nil {
+            performSegue(withIdentifier: "goHome", sender: self)
+        }
         let facebookLogin = FBSDKLoginButton()
         view.addSubview(facebookLogin)
         facebookLogin.delegate = self
-//        facebookLogin.center = self.view.center
         facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
+        
         
      
         
@@ -122,11 +125,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         self.createAlert(title: "Error", message: error.localizedDescription)
                         return
                     }
-                    else{
-                    
                 
-                   self.performSegue(withIdentifier: "goHome", sender: self)
-                }
+                
                 // [END_EXCLUDE]
             }
             // [END link_credential]

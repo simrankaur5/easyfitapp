@@ -125,7 +125,11 @@
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				49E6A79F221C897800534EB2 /* circle.png */,
+=======
+				9ABD4778221D6FC300C12C91 /* cardioback.jpg */,
+>>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
 =======
 				9ABD4778221D6FC300C12C91 /* cardioback.jpg */,
 >>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8

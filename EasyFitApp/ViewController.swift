@@ -91,21 +91,24 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        if FBSDKAccessToken.currentAccessTokenIsActive() != nil {
-            performSegue(withIdentifier: "goHome", sender: self)
-        }
+
         let facebookLogin = FBSDKLoginButton()
         view.addSubview(facebookLogin)
         facebookLogin.delegate = self
         facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
         
-        
+//        if FBSDKAccessToken.currentAccessTokenIsActive() == true 
+    
+        print(FBSDKAccessToken.currentAccessTokenIsActive())
      
         
         
     
 
     }
+    
+   
+
     
     func createAlert(title:String , message:String ){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -144,7 +147,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         return
                     }
                     else{
-                           self.performSegue(withIdentifier: "goHome", sender: self)
+                        
                 }
                     // User is signed in
                     // [START_EXCLUDE]
@@ -159,9 +162,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-//        if let error = error {
-//            self.createAlert(title: "Error", message: error.localizedDescription)
-//        }
+
         let loginManager = FBSDKLoginManager()
         loginManager.logIn(withReadPermissions: ["email"], from: self, handler: { (result, error) in
             if let error = error {
@@ -172,7 +173,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 // [START headless_facebook_auth]
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseLogin(credential)
-             
+                self.performSegue(withIdentifier: "goHome", sender: self)
          
                 // [END headless_facebook_auth]
 //                Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
@@ -192,6 +193,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 }
 
+<<<<<<< HEAD
 class homeViewController: UIViewController
 {
     
@@ -242,5 +244,7 @@ class homeViewController: UIViewController
     
 
 }
+=======
+>>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
 
 

@@ -22,6 +22,7 @@
 		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 		90E97FA722198D9000160841 /* easyft.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA622198D9000160841 /* easyft.png */; };
 		90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E97FAB221CB4BF00160841 /* HomeViewController.swift */; };
+		9ABD4779221D6FC300C12C91 /* cardioback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD4778221D6FC300C12C91 /* cardioback.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		90E97FA622198D9000160841 /* easyft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easyft.png; sourceTree = "<group>"; };
 		90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyFitApp.entitlements; sourceTree = "<group>"; };
 		90E97FAB221CB4BF00160841 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9ABD4778221D6FC300C12C91 /* cardioback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cardioback.jpg; path = ../../../../../cardioback.jpg; sourceTree = "<group>"; };
 		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 			children = (
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
+				9ABD4778221D6FC300C12C91 /* cardioback.jpg */,
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
 				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,
@@ -201,6 +204,7 @@
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,
+				9ABD4779221D6FC300C12C91 /* cardioback.jpg in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
 				90E97F982218D34600160841 /* exercising-clipart-ladies-fitness-5.png in Resources */,
 				90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */,

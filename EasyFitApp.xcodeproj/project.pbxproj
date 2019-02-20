@@ -124,15 +124,11 @@
 			children = (
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 				49E6A79F221C897800534EB2 /* circle.png */,
-=======
+
 				9ABD4778221D6FC300C12C91 /* cardioback.jpg */,
->>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
-=======
-				9ABD4778221D6FC300C12C91 /* cardioback.jpg */,
->>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
+
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
 				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,

@@ -193,8 +193,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class homeViewController: UIViewController
 {
     
@@ -245,9 +243,3 @@ class homeViewController: UIViewController
     
 
 }
-=======
->>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
-
-=======
->>>>>>> 10cbc582dfc2cbf13fbdb51a71016927c350b0b8
-

@@ -11,11 +11,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     
+    @IBOutlet weak var lvlLabel: UILabel!
+    
+    @IBOutlet weak var xpProgressLabel: UILabel!
+    
+    @IBOutlet weak var calProgressLabel: UILabel!
+    
     
     
     @IBOutlet weak var lvlProgress: UIProgressView!
     
     @IBOutlet weak var calProgress: UIProgressView!
+    
+    
+    
+    
     
     //@IBOutlet weak var circleView: UIView!
     
@@ -27,6 +37,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 
+        lvlLabel.font = lvlLabel.font.withSize(40)
         
         lvlProgress.progress = 0
         calProgress.progress = 0
@@ -57,6 +68,9 @@ class HomeViewController: UIViewController {
             //Snapshot NSDictionary
             let value = snapshot.value as? NSDictionary
             
+            //LVL VALUE
+            let lvlS = value?["lvl"] as! Int
+            
             //XP VALUE
             let xpS = value?["xp"] as! Int
             
@@ -68,12 +82,25 @@ class HomeViewController: UIViewController {
             let xpProgress : Float = Float(xpS % 50)*0.02
             let calProgress : Float = Float(calorieS) / Float(calorieLmtS)
             
+            
+            //DISPLAY LEVEL
+            self.lvlLabel.text = String(lvlS)
+            
+            self.xpProgressLabel.text = String(Int(xpProgress*100)) + "%"
+            
+            self.calProgressLabel.text = String(Int(calorieS)) + " / " + String(Int(calorieLmtS))
+            
+            
             //ANIMATE THE PROGRESSVIEW
             UIView.animate(withDuration: 2.5) {
                 self.lvlProgress.setProgress(xpProgress, animated: true)
                 
                 self.calProgress.setProgress(calProgress, animated: true)
             }
+            
+
+            
+            
             
             
             // ...

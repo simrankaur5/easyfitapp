@@ -303,6 +303,7 @@
                         <outlet property="calProgress" destination="gXq-B5-9kF" id="FSK-4i-SKZ"/>
                         <outlet property="lvlProgress" destination="sAe-Vf-lWt" id="m4m-cy-OHd"/>
                         <outlet property="welcomeLabel" destination="7eb-tC-WGq" id="tni-8r-6aU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="movee" id="6Gp-Og-yby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZ0-uM-H48" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,6 +405,6 @@
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EOn-ox-S6B"/>
+        <segue reference="6Gp-Og-yby"/>
     </inferredMetricsTieBreakers>
 </document>

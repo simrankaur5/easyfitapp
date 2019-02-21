@@ -3,6 +3,8 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 import FirebaseUI
+import FBSDKLoginKit
+import FBSDKCoreKit
 class HomeViewController: UIViewController {
 
     
@@ -24,8 +26,9 @@ class HomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+
         
-        
+        var welcomeName = ""
         var database_ref : DatabaseReference!
         var database_handle : DatabaseHandle!
         

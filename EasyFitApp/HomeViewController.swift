@@ -1,8 +1,8 @@
 
 import UIKit
 import FirebaseDatabase
-
-
+import Firebase
+import FirebaseUI
 class HomeViewController: UIViewController {
 
     
@@ -39,6 +39,11 @@ class HomeViewController: UIViewController {
 //        })
    
 //        welcomeLabel.text = w_Name
+//        FirebaseUser; user = FirebaseAuth.getInstance().getCurrentUser();
+        if (Auth.auth().currentUser?.displayName) != nil{
+            welcomeName = (Auth.auth().currentUser?.displayName)!
+        }
+        welcomeLabel.adjustsFontSizeToFitWidth = true
         welcomeLabel.text = "Welcome " + welcomeName
         
         lvlProgress.tintColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1.0)

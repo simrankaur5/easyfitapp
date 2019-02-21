@@ -15,7 +15,7 @@ import FBSDKCoreKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    
+
 
 
     
@@ -87,7 +87,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var registerPasswordTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerConfirmPasswordTextField: UITextField!
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -97,16 +97,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         facebookLogin.delegate = self
         facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
         
-//        if FBSDKAccessToken.currentAccessTokenIsActive() == true 
+
     
-        print(FBSDKAccessToken.currentAccessTokenIsActive())
+//        print(FBSDKAccessToken.currentAccessTokenIsActive())
      
         
         
     
 
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        if FBSDKAccessToken.currentAccessTokenIsActive() == true {
+            self.performSegue(withIdentifier: "goHome", sender: self)
+        }
+        
+    }
    
 
     
@@ -128,7 +134,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         self.createAlert(title: "Error", message: error.localizedDescription)
                         return
                     }
-                
+           
                 
                 // [END_EXCLUDE]
             }
@@ -146,9 +152,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         // [END_EXCLUDE]
                         return
                     }
-                    else{
+                
                         
-                }
+                
                     // User is signed in
                     // [START_EXCLUDE]
                     // Merge prevUser and currentUser accounts and data
@@ -162,29 +168,54 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if let error = error{
+                            self.createAlert(title: "Error", message: error.localizedDescription)
 
-        let loginManager = FBSDKLoginManager()
-        loginManager.logIn(withReadPermissions: ["email"], from: self, handler: { (result, error) in
-            if let error = error {
-                self.createAlert(title: "Error", message: error.localizedDescription)
-            } else if result!.isCancelled {
-                print("FBLogin cancelled")
-            } else {
-                // [START headless_facebook_auth]
-                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseLogin(credential)
-                self.performSegue(withIdentifier: "goHome", sender: self)
-         
-                // [END headless_facebook_auth]
-//                Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-               
-            }
-        })
+        }
+        else if result.isCancelled{
+            self.createAlert(title: "Error", message: "Facebook login cancelled")
+        }
+        else{
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            //
+                            self.firebaseLogin(credential)
+                            self.performSegue(withIdentifier: "goHome", sender: self)
+        }
+        
+////        var loginSucess = false;
+//        let loginManager = FBSDKLoginManager()
+//        loginManager.logIn(withReadPermissions: ["email"], from: self, handler: { (result, error) in
+//
+//            if let error = error {
+//                self.createAlert(title: "Error", message: error.localizedDescription)
+//            } else if result!.isCancelled {
+//                self.createAlert(title: "Error", message: "Facebook login cancelled")
+//                print("FBLogin cancelled")
+//            } else {
+//                // [START headless_facebook_auth
+//
+//                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+//
+//                self.firebaseLogin(credential)
+//                                        self.performSegue(withIdentifier: "goHome", sender: self)
+//
+//
+//                // [END headless_facebook_auth]
+////                Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+//
+//            }
+//
+//        })
+//        if loginSucess == true{
+//                        let credential = FacebookAuthProvider.credential(withAccessToken: ((FBSDKAccessToken.current().tokenString))!)
+//                        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+//                        self.performSegue(withIdentifier: "goHome", sender: self)
+//        }
 
 //            let credential = FacebookAuthProvider.credential(withAccessToken: ((FBSDKAccessToken.current().tokenString))!)
 //            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
 //            self.performSegue(withIdentifier: "goHome", sender: self)
-            
+        
         
     }
 
@@ -194,3 +225,5 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
 
 }
+
+

@@ -7,14 +7,63 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
 
 class ProfileViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var nameHeaderLabel: UILabel!
+    
+    
+    @IBOutlet weak var levelHeaderlLabel: UILabel!
+    
+    
+    @IBOutlet weak var memberLabel: UILabel!
+    
+    @IBOutlet weak var joinedHeaderLabel: UILabel!
+    
+    
+    @IBOutlet weak var profileImg: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
+        var database_ref : DatabaseReference!
+        database_ref = Database.database().reference()
+        let currentUser = "1001"
+        
+        database_ref.child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            //Snapshot NSDictionary
+            let value = snapshot.value as? NSDictionary
+            
+            //name VALUE
+            let nameS = value?["name"] as! String
+            
+            //lvl VALUE
+            let lvlS = value?["xp"] as! Int
+            
+            //creation VALUE
+            let creationS = value?["creation"] as! String
+            
+            
+            self.nameHeaderLabel.text = nameS
+            self.levelHeaderlLabel.text = String(lvlS)
+            self.memberLabel.text = "Member"
+            self.joinedHeaderLabel.text = "Since: " + creationS
+            
+            })
     }
+        
+        
+        
+        
+
     
 
     /*

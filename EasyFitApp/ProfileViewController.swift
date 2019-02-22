@@ -28,9 +28,47 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImg: UIImageView!
     
     
+    
+    @IBOutlet weak var currentProgressMainL: UILabel!
+    
+    
+    @IBOutlet weak var currentProgressL1: UILabel!
+    
+    @IBOutlet weak var currentProgressL2: UILabel!
+    
+    @IBOutlet weak var currentProgressL3: UILabel!
+    
+    
+    @IBOutlet weak var currentProgressHL1: UILabel!
+    
+    @IBOutlet weak var currentProgressHL2: UILabel!
+    
+    @IBOutlet weak var currentProgressHL3: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
+        currentProgressL1.layer.borderColor = UIColor.black.cgColor
+        currentProgressL1.layer.borderWidth = 4.0
+        currentProgressL1.layer.cornerRadius = 8
+
+        currentProgressL2.layer.borderColor = UIColor.black.cgColor
+        currentProgressL2.layer.borderWidth = 4.0
+        currentProgressL2.layer.cornerRadius = 8
+        
+        currentProgressL3.layer.borderColor = UIColor.black.cgColor
+        currentProgressL3.layer.borderWidth = 4.0
+        currentProgressL3.layer.cornerRadius = 8
+        
+        currentProgressMainL.text = "CURRENT PROGRESS"
+        
+        currentProgressHL1.text = "Weight"
+        currentProgressHL2.text = "Pace"
+        currentProgressHL3.text = "Distance"
         
         
         var database_ref : DatabaseReference!
@@ -46,16 +84,24 @@ class ProfileViewController: UIViewController {
             let nameS = value?["name"] as! String
             
             //lvl VALUE
-            let lvlS = value?["xp"] as! Int
+            let lvlS = value?["lvl"] as! Int
             
             //creation VALUE
             let creationS = value?["creation"] as! String
             
+            let currentWeightS = value?["current_weight"] as! Int
+            let currentDistanceS = value?["current_distance"] as! Int
+            let currentPaceS = value?["current_pace"] as! Float
             
             self.nameHeaderLabel.text = nameS
-            self.levelHeaderlLabel.text = String(lvlS)
+            self.levelHeaderlLabel.text = "Level : " + String(lvlS)
             self.memberLabel.text = "Member"
-            self.joinedHeaderLabel.text = "Since: " + creationS
+            self.joinedHeaderLabel.text = creationS
+            
+            self.currentProgressL1.text = String(currentWeightS)
+            self.currentProgressL2.text = String(currentPaceS)
+            self.currentProgressL3.text = String(currentDistanceS)
+            
             
             })
     }

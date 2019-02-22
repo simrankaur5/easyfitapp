@@ -91,7 +91,7 @@ class ProfileViewController: UIViewController {
             
             let currentWeightS = value?["current_weight"] as! Int
             let currentDistanceS = value?["current_distance"] as! Int
-            let currentPaceS = value?["current_pace"] as! Float
+            let currentPaceS = value?["current_pace"] as! Double
             
             self.nameHeaderLabel.text = nameS
             self.levelHeaderlLabel.text = "Level : " + String(lvlS)

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */; };
 		496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496100C9222084B20013BBC0 /* ProfileViewController.swift */; };
-		496100CC22208A8F0013BBC0 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 496100CB22208A8E0013BBC0 /* profileImg.png */; };
 		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
 		90D247B02217536800E7C523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AF2217536800E7C523 /* ViewController.swift */; };
@@ -29,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		496100C9222084B20013BBC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		496100CB22208A8E0013BBC0 /* profileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileImg.png; path = ../../../../Downloads/profileImg.png; sourceTree = "<group>"; };
 		49E6A79F221C897800534EB2 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../circle.png; sourceTree = "<group>"; };
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AA2217536800E7C523 /* EasyFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +126,6 @@
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
 				49E6A79F221C897800534EB2 /* circle.png */,
-				496100CB22208A8E0013BBC0 /* profileImg.png */,
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
 				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,
@@ -208,7 +205,6 @@
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
 				90E97FA722198D9000160841 /* easyft.png in Resources */,
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
-				496100CC22208A8F0013BBC0 /* profileImg.png in Resources */,
 				49E6A7A0221C897900534EB2 /* circle.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,

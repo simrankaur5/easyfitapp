@@ -11,11 +11,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     
+    @IBOutlet weak var lvlLabel: UILabel!
+    
+    @IBOutlet weak var xpProgressLabel: UILabel!
+    
+    @IBOutlet weak var calProgressLabel: UILabel!
+    
     
     
     @IBOutlet weak var lvlProgress: UIProgressView!
     
     @IBOutlet weak var calProgress: UIProgressView!
+    
+    
+    
+    
     
     //@IBOutlet weak var circleView: UIView!
     
@@ -27,20 +37,70 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 
+        lvlLabel.font = lvlLabel.font.withSize(40)
         
-        var welcomeName = ""
+        lvlProgress.progress = 0
+        calProgress.progress = 0
+        
         var database_ref : DatabaseReference!
-        var database_handle : DatabaseHandle!
+        
         
         database_ref = Database.database().reference()
+        
+        let currentUser = "1001"
+        
+//    database_ref.child(currentUser).child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user name
+//            let value : String = (snapshot.value as? String)!
+//            self.welcomeLabel.text = "Welcome " + value
+//
+//
+//
+//            // ...
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+        
+        
+        
+        database_ref.child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
+  
+            //Snapshot NSDictionary
+            let value = snapshot.value as? NSDictionary
+            
+            //LVL VALUE
+            let lvlS = value?["lvl"] as! Int
+            
+            //XP VALUE
+            let xpS = value?["xp"] as! Int
+            
+            //CALORIES AND CALORIE LIMIT VALUE
+            let calorieS = value?["calories"] as! Float
+            let calorieLmtS = value?["calorie_limit"] as! Float
+            
+            //FLOAT VALUE FOR XP AND CALORIE PROGRESS VIEW
+            let xpProgress : Float = Float(xpS % 50)*0.02
+            let calProgress : Float = Float(calorieS) / Float(calorieLmtS)
+            
+            
+            //DISPLAY LEVEL
+            self.lvlLabel.text = String(lvlS)
+            
+            self.xpProgressLabel.text = String(Int(xpProgress*100)) + "%"
+            
+            self.calProgressLabel.text = String(Int(calorieS)) + " / " + String(Int(calorieLmtS))
+            
+            
+            //ANIMATE THE PROGRESSVIEW
+            UIView.animate(withDuration: 2.5) {
+                self.lvlProgress.setProgress(xpProgress, animated: true)
+                
+                self.calProgress.setProgress(calProgress, animated: true)
+            }
+            
 
-        
-        
-         database_ref.child("1001").child("name").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value : String = (snapshot.value as? String)!
-            self.welcomeLabel.text = "Welcome " + value
-          
+            
+            
             
             
             // ...
@@ -48,31 +108,7 @@ class HomeViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        
-        
-//        database_handle = database_ref.child("1001/name").observe(.childAdded, with: { (data) in
-//            let name : String = (data.value as? String)!
-//            debugPrint(name)
-//        })
-        
-        //        welcomeLabel.text = w_Name
-//        welcomeLabel.text = String()
-        
-        
-        
-//        database_ref.child("1001/name").setValue("TEST")
-        
-        //        database_ref.child("100001/Name").observeSingleEvent(of: .value, with: { (snapshot) in
-//            // Get welcome name
-//            let wName = snapshot.value as! String
-//
-//            welcomeName = wName
-//
-//
-//        })
-   
-//        welcomeLabel.text = w_Name
-//        FirebaseUser; user = FirebaseAuth.getInstance().getCurrentUser();
+        var welcomeName = ""
         if (Auth.auth().currentUser?.displayName) != nil{
             welcomeName = (Auth.auth().currentUser?.displayName)!
         }

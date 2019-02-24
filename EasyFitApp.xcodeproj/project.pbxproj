@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */; };
+		494D3B992221D9AE00A2BF76 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 494D3B9B2221D9AE00A2BF76 /* profileImg.png */; };
 		496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496100C9222084B20013BBC0 /* ProfileViewController.swift */; };
 		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494D3B9A2221D9AE00A2BF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/profileImg.png; sourceTree = "<group>"; };
 		496100C9222084B20013BBC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49E6A79F221C897800534EB2 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../circle.png; sourceTree = "<group>"; };
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		90E97F992218D34F00160841 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				494D3B9B2221D9AE00A2BF76 /* profileImg.png */,
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
 				49E6A79F221C897800534EB2 /* circle.png */,
@@ -203,6 +206,7 @@
 				90E97FA12218D68400160841 /* iconfinder_Picture13_3289577.png in Resources */,
 				90E97F9F2218D5BF00160841 /* iconfinder_65_171424.png in Resources */,
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
+				494D3B992221D9AE00A2BF76 /* profileImg.png in Resources */,
 				90E97FA722198D9000160841 /* easyft.png in Resources */,
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
 				49E6A7A0221C897900534EB2 /* circle.png in Resources */,
@@ -313,6 +317,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		494D3B9B2221D9AE00A2BF76 /* profileImg.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494D3B9A2221D9AE00A2BF76 /* Base */,
+			);
+			name = profileImg.png;
+			path = ../../../../Downloads;
+			sourceTree = "<group>";
+		};
 		90D247B12217536800E7C523 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

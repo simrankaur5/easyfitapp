@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EasyFitApp/ProfileViewController.swift"
-            timestampString = "572569776.917347"
+            timestampString = "572724228.377717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "ProfileViewController"
             landmarkType = "3">
          </BreakpointContent>

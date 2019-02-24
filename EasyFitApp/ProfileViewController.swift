@@ -29,28 +29,37 @@ class ProfileViewController: UIViewController {
     
     
     
+    //CURRENT PROGRESS LABELS
     @IBOutlet weak var currentProgressMainL: UILabel!
     
-    
     @IBOutlet weak var currentProgressL1: UILabel!
-    
     @IBOutlet weak var currentProgressL2: UILabel!
-    
     @IBOutlet weak var currentProgressL3: UILabel!
     
-    
+            //HEADER LABELS
     @IBOutlet weak var currentProgressHL1: UILabel!
-    
     @IBOutlet weak var currentProgressHL2: UILabel!
-    
     @IBOutlet weak var currentProgressHL3: UILabel!
+    
+    //GOALS LABELS
+    
+    @IBOutlet weak var goalsMainL: UILabel!
+    
+    
+    @IBOutlet weak var goalsL1: UILabel!
+    @IBOutlet weak var goalsL2: UILabel!
+    @IBOutlet weak var goalsL3: UILabel!
+    
+    @IBOutlet weak var goalsHL1: UILabel!
+    @IBOutlet weak var goalsHL2: UILabel!
+    @IBOutlet weak var goalsHL3: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        
+        //CURRENT PROGRESS INIT
         
         currentProgressL1.layer.borderColor = UIColor.black.cgColor
         currentProgressL1.layer.borderWidth = 4.0
@@ -66,11 +75,85 @@ class ProfileViewController: UIViewController {
         
         currentProgressMainL.text = "CURRENT PROGRESS"
         
+        
+        
+        
         currentProgressHL1.text = "Weight"
         currentProgressHL2.text = "Pace"
         currentProgressHL3.text = "Distance"
         
+        //GOALS INIT
         
+        goalsL1.layer.borderColor = UIColor.black.cgColor
+        goalsL1.layer.borderWidth = 4.0
+        goalsL1.layer.cornerRadius = 8
+        
+        goalsL2.layer.borderColor = UIColor.black.cgColor
+        goalsL2.layer.borderWidth = 4.0
+        goalsL2.layer.cornerRadius = 8
+        
+        goalsL3.layer.borderColor = UIColor.black.cgColor
+        goalsL3.layer.borderWidth = 4.0
+        goalsL3.layer.cornerRadius = 8
+        
+        goalsMainL.text = "MY GOALS"
+        
+        
+        var goalsHArray = ["Distance", "Testing"]
+        var goalsVArray = ["Distance", "Testing"]
+    
+        for i in 0...2 {
+            if goalsVArray.indices.contains(i)
+            {
+
+                if i == 0
+                {
+                    goalsL1.isHidden = false
+                    goalsHL1.isHidden = false
+                    goalsL1.text = goalsVArray[i]
+                    goalsHL1.text = goalsHArray[i]
+                }
+                else if i == 1
+                {
+                    goalsL2.isHidden = false
+                    goalsHL2.isHidden = false
+                    goalsL2.text = goalsVArray[i]
+                    goalsHL2.text = goalsHArray[i]
+                }
+                else if i == 2
+                {
+                    goalsL3.isHidden = false
+                    goalsHL3.isHidden = false
+                    goalsL3.text = goalsVArray[i]
+                    goalsHL3.text = goalsHArray[i]
+                }
+                
+            }
+            else
+            {
+                if i == 0
+                {
+                    goalsL1.isHidden = true
+                    goalsHL1.isHidden = true
+                }
+                else if i == 1
+                {
+                    goalsL2.isHidden = true
+                    goalsHL3.isHidden = true
+                }
+                else if i == 2
+                {
+                    goalsL3.isHidden = true
+                    goalsHL3.isHidden = true
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        //DATABASE REFERENCE
         var database_ref : DatabaseReference!
         database_ref = Database.database().reference()
         let currentUser = "1001"
@@ -98,9 +181,9 @@ class ProfileViewController: UIViewController {
             self.memberLabel.text = "Member"
             self.joinedHeaderLabel.text = creationS
             
-            self.currentProgressL1.text = String(currentWeightS)
-            self.currentProgressL2.text = String(currentPaceS)
-            self.currentProgressL3.text = String(currentDistanceS)
+            self.currentProgressL1.text = String(currentWeightS) + "kg"
+            self.currentProgressL2.text = String(currentPaceS) + "m/s"
+            self.currentProgressL3.text = String(currentDistanceS) + "km"
             
             
             })

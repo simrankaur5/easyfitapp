@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */; };
-		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
 		90D247B02217536800E7C523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AF2217536800E7C523 /* ViewController.swift */; };
 		90D247B32217536800E7C523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B12217536800E7C523 /* Main.storyboard */; };
@@ -23,10 +22,18 @@
 		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 		90E97FA722198D9000160841 /* easyft.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA622198D9000160841 /* easyft.png */; };
 		90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E97FAB221CB4BF00160841 /* HomeViewController.swift */; };
+		9A96255B22202FAB00BFB5C6 /* easyfitmodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A96255922202FAB00BFB5C6 /* easyfitmodel.xcdatamodeld */; };
+		9A96255F222031AE00BFB5C6 /* CardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96255E222031AE00BFB5C6 /* CardioViewController.swift */; };
+		9A96256522203EC600BFB5C6 /* CardioDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96256422203EC600BFB5C6 /* CardioDetailsViewController.swift */; };
+		9A96256D2220484400BFB5C6 /* MulticolorPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9625682220484400BFB5C6 /* MulticolorPolyline.swift */; };
+		9A96256E2220484400BFB5C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9625692220484400BFB5C6 /* LocationManager.swift */; };
+		9A96256F2220484400BFB5C6 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96256A2220484400BFB5C6 /* StoryboardSupport.swift */; };
+		9A9625702220484400BFB5C6 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96256B2220484400BFB5C6 /* UnitExtensions.swift */; };
+		9A9625712220484400BFB5C6 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96256C2220484400BFB5C6 /* FormatDisplay.swift */; };
+		9A96257622204DF700BFB5C6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96257522204DF700BFB5C6 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49E6A79F221C897800534EB2 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../circle.png; sourceTree = "<group>"; };
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AA2217536800E7C523 /* EasyFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AD2217536800E7C523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +53,15 @@
 		90E97FA622198D9000160841 /* easyft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easyft.png; sourceTree = "<group>"; };
 		90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyFitApp.entitlements; sourceTree = "<group>"; };
 		90E97FAB221CB4BF00160841 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9A96255A22202FAB00BFB5C6 /* easyfitmodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = easyfitmodel.xcdatamodel; sourceTree = "<group>"; };
+		9A96255E222031AE00BFB5C6 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioViewController.swift; sourceTree = "<group>"; };
+		9A96256422203EC600BFB5C6 /* CardioDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioDetailsViewController.swift; sourceTree = "<group>"; };
+		9A9625682220484400BFB5C6 /* MulticolorPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MulticolorPolyline.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/MulticolorPolyline.swift"; sourceTree = "<group>"; };
+		9A9625692220484400BFB5C6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/LocationManager.swift"; sourceTree = "<group>"; };
+		9A96256A2220484400BFB5C6 /* StoryboardSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardSupport.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/StoryboardSupport.swift"; sourceTree = "<group>"; };
+		9A96256B2220484400BFB5C6 /* UnitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitExtensions.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/UnitExtensions.swift"; sourceTree = "<group>"; };
+		9A96256C2220484400BFB5C6 /* FormatDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormatDisplay.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/FormatDisplay.swift"; sourceTree = "<group>"; };
+		9A96257522204DF700BFB5C6 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "../../../../../MoonRunner - part 1 final/MoonRunner/CoreData/CoreDataStack.swift"; sourceTree = "<group>"; };
 		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +116,8 @@
 		90D247AC2217536800E7C523 /* EasyFitApp */ = {
 			isa = PBXGroup;
 			children = (
+				9A96257422204DC100BFB5C6 /* CoreData */,
+				9A962567222047CC00BFB5C6 /* Supporting Files */,
 				90E97F952218AC6100160841 /* FacebookBridge.m */,
 				90E97F942218AC5900160841 /* EasyFitApp-Bridging-Header.h */,
 				90D247AD2217536800E7C523 /* AppDelegate.swift */,
@@ -113,6 +131,8 @@
 				90D247B62217536800E7C523 /* LaunchScreen.storyboard */,
 				90D247B92217536800E7C523 /* Info.plist */,
 				90D247C3221753E300E7C523 /* GoogleService-Info.plist */,
+				9A96255E222031AE00BFB5C6 /* CardioViewController.swift */,
+				9A96256422203EC600BFB5C6 /* CardioDetailsViewController.swift */,
 			);
 			path = EasyFitApp;
 			sourceTree = "<group>";
@@ -122,12 +142,32 @@
 			children = (
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
-				49E6A79F221C897800534EB2 /* circle.png */,
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
 				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		9A962567222047CC00BFB5C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A96256C2220484400BFB5C6 /* FormatDisplay.swift */,
+				9A9625692220484400BFB5C6 /* LocationManager.swift */,
+				9A9625682220484400BFB5C6 /* MulticolorPolyline.swift */,
+				9A96256A2220484400BFB5C6 /* StoryboardSupport.swift */,
+				9A96256B2220484400BFB5C6 /* UnitExtensions.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A96257422204DC100BFB5C6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9A96257522204DF700BFB5C6 /* CoreDataStack.swift */,
+				9A96255922202FAB00BFB5C6 /* easyfitmodel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +207,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
@@ -202,7 +245,6 @@
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
 				90E97FA722198D9000160841 /* easyft.png in Resources */,
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
-				49E6A7A0221C897900534EB2 /* circle.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
@@ -300,9 +342,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E97F962218AC6100160841 /* FacebookBridge.m in Sources */,
+				9A96256D2220484400BFB5C6 /* MulticolorPolyline.swift in Sources */,
+				9A96256F2220484400BFB5C6 /* StoryboardSupport.swift in Sources */,
+				9A96256522203EC600BFB5C6 /* CardioDetailsViewController.swift in Sources */,
 				90D247B02217536800E7C523 /* ViewController.swift in Sources */,
 				90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */,
+				9A96257622204DF700BFB5C6 /* CoreDataStack.swift in Sources */,
+				9A96255B22202FAB00BFB5C6 /* easyfitmodel.xcdatamodeld in Sources */,
+				9A96255F222031AE00BFB5C6 /* CardioViewController.swift in Sources */,
 				90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */,
+				9A9625712220484400BFB5C6 /* FormatDisplay.swift in Sources */,
+				9A96256E2220484400BFB5C6 /* LocationManager.swift in Sources */,
+				9A9625702220484400BFB5C6 /* UnitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +562,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A96255922202FAB00BFB5C6 /* easyfitmodel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A96255A22202FAB00BFB5C6 /* easyfitmodel.xcdatamodel */,
+			);
+			currentVersion = 9A96255A22202FAB00BFB5C6 /* easyfitmodel.xcdatamodel */;
+			path = easyfitmodel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 90D247A22217536800E7C523 /* Project object */;
 }

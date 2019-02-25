@@ -239,7 +239,7 @@
                                     <color key="titleColor" red="0.01448710607" green="0.36298803610000002" blue="0.37711421029999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rxF-Qc-rBm" kind="show" id="wfk-Oo-8bw"/>
+                                    <segue destination="rxF-Qc-rBm" kind="show" identifier="" id="wfk-Oo-8bw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvs-3j-E8u">
@@ -305,10 +305,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="KAQ-xc-qxy">
-                                <rect key="frame" x="247" y="83" width="160" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hVa-YJ-gXh"/>
@@ -330,15 +326,25 @@
         <!--cardio-->
         <scene sceneID="wA4-rd-dZe">
             <objects>
-                <viewController title="cardio" id="hLf-LA-5fC" sceneMemberID="viewController">
+                <viewController title="cardio" id="hLf-LA-5fC" customClass="CardioViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tym-Ic-e9Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHn-sG-kaE">
-                                <rect key="frame" x="0.0" y="341" width="414" height="304"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-3l-9Kr" userLabel="Map Container View">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHn-sG-kaE">
+                                        <rect key="frame" x="-87" y="-88" width="414" height="304"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hLf-LA-5fC" id="dBv-7I-Imr"/>
+                                        </connections>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOH-PK-ukJ">
                                 <rect key="frame" x="0.0" y="80" width="414" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -349,33 +355,80 @@
                                 <color key="shadowColor" red="1" green="0.23397785209999999" blue="0.40854099960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pace / km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-lB-I5J">
-                                <rect key="frame" x="0.0" y="267" width="201" height="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="va2-UQ-FK9">
+                                <rect key="frame" x="17" y="168" width="380" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pace / km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-lB-I5J">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="28"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                        <color key="textColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH3-uI-6Wb">
+                                        <rect key="frame" x="173.66666666666666" y="0.0" width="103.99999999999997" height="28"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                        <color key="textColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-Jb-nXh">
+                                        <rect key="frame" x="318.66666666666669" y="0.0" width="61.333333333333314" height="28"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                        <color key="textColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T40-0w-pP6" userLabel="Button Stack View">
+                                <rect key="frame" x="87" y="702" width="270" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go4-Qz-GjU">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="0.0"/>
+                                        <color key="backgroundColor" white="0.17115261130000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopTapped:" destination="hLf-LA-5fC" eventType="touchUpInside" id="LxB-qk-HGK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiG-LR-aHW">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="45"/>
+                                        <color key="backgroundColor" white="0.17115261130136986" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
+                                        <state key="normal" title="Start New Workout">
+                                            <color key="titleColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTapped:" destination="hLf-LA-5fC" eventType="touchUpInside" id="nLQ-N4-Ft8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exp +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-ye-H2h">
+                                <rect key="frame" x="115" y="236" width="212" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
                                 <color key="textColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exp +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-ye-H2h">
-                                <rect key="frame" x="202" y="267" width="212" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
-                                <color key="textColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiG-LR-aHW">
-                                <rect key="frame" x="67" y="711" width="297" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.17115261130136986" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
-                                <state key="normal" title="Start New Workout">
-                                    <color key="titleColor" red="0.78618019819999996" green="0.90450197460000004" blue="0.3645628393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UUX-J2-QH2"/>
                     </view>
+                    <connections>
+                        <outlet property="dataStackView" destination="va2-UQ-FK9" id="fzl-pn-Oel"/>
+                        <outlet property="distanceLabel" destination="yH3-uI-6Wb" id="8tj-6i-yNr"/>
+                        <outlet property="mapContainerView" destination="3UH-3l-9Kr" id="E3l-Ig-ROb"/>
+                        <outlet property="mapView" destination="iHn-sG-kaE" id="7f6-PM-SyL"/>
+                        <outlet property="paceLabel" destination="aqS-lB-I5J" id="84j-Xh-InL"/>
+                        <outlet property="startButton" destination="iiG-LR-aHW" id="4qG-2m-MZS"/>
+                        <outlet property="stopButton" destination="go4-Qz-GjU" id="aHw-hb-f0f"/>
+                        <outlet property="timeLabel" destination="cXW-Jb-nXh" id="lJb-Zp-387"/>
+                        <segue destination="kPM-HW-Rf1" kind="show" identifier="CardioDetailsViewController" id="4qr-V2-8a4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDN-Jw-B1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,9 +464,74 @@
             </objects>
             <point key="canvasLocation" x="3536" y="80"/>
         </scene>
+        <!--cardioDetails-->
+        <scene sceneID="D3G-ds-IbQ">
+            <objects>
+                <viewController title="cardioDetails" id="kPM-HW-Rf1" customClass="CardioDetailsViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEc-sF-bGb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="izE-4f-k6A">
+                                <rect key="frame" x="0.0" y="505.99999999999994" width="414" height="207.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZr-by-Z7C">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pace:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMx-aI-agR">
+                                        <rect key="frame" x="0.0" y="62.333333333333378" width="414" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-4Q-ZF6">
+                                        <rect key="frame" x="0.0" y="124.66666666666661" width="414" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXb-ie-xdW" userLabel="Date:">
+                                        <rect key="frame" x="0.0" y="187" width="414" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L8R-KS-MdK">
+                                <rect key="frame" x="0.0" y="115" width="414" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kPM-HW-Rf1" id="rBK-d6-hEp"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pPt-LZ-xqP" firstAttribute="trailing" secondItem="izE-4f-k6A" secondAttribute="trailing" id="QiF-hg-1Y0"/>
+                            <constraint firstItem="izE-4f-k6A" firstAttribute="top" secondItem="pPt-LZ-xqP" secondAttribute="top" constant="462" id="YWM-fx-COm"/>
+                            <constraint firstItem="izE-4f-k6A" firstAttribute="leading" secondItem="pPt-LZ-xqP" secondAttribute="leading" id="yQr-2s-RaO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pPt-LZ-xqP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IpL-JJ-wKB"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="eXb-ie-xdW" id="DFX-fW-WJO"/>
+                        <outlet property="distanceLabel" destination="rZr-by-Z7C" id="dUO-T1-egu"/>
+                        <outlet property="mapView" destination="L8R-KS-MdK" id="Hsx-ue-HEa"/>
+                        <outlet property="paceLabel" destination="YMx-aI-agR" id="syF-0L-4yN"/>
+                        <outlet property="timeLabel" destination="hhT-4Q-ZF6" id="qcT-3H-Cce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9C-Ud-ux2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="779.46428571428567"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="circle.png" width="480" height="480"/>
         <image name="exercising-clipart-ladies-fitness-5.png" width="426" height="600"/>
         <image name="ic_account_circle.png" width="60" height="60"/>
         <image name="iconfinder_65_171424.png" width="128" height="128"/>
@@ -422,6 +540,6 @@
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Gp-Og-yby"/>
+        <segue reference="lxD-1h-OZm"/>
     </inferredMetricsTieBreakers>
 </document>

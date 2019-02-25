@@ -32,6 +32,7 @@ class RegMoreViewController: UIViewController {
                 database_ref.child("users/\(user.uid)/weight").setValue(weight)
                 database_ref.child("users/\(user.uid)/height").setValue(height)
                 database_ref.child("users/\(user.uid)/gender").setValue(gender)
+                
             }
             self.performSegue(withIdentifier: "regMoreToLogin", sender: self)
         }

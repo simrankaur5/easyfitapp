@@ -5,6 +5,7 @@ import Firebase
 import FirebaseUI
 import FBSDKLoginKit
 import FBSDKCoreKit
+ var database_ref : DatabaseReference!
 class HomeViewController: UIViewController {
 
     
@@ -33,7 +34,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         database_ref = Database.database().reference()
         // Do any additional setup after loading the view.
         
 
@@ -41,11 +42,11 @@ class HomeViewController: UIViewController {
         
         lvlProgress.progress = 0
         calProgress.progress = 0
-        
-        var database_ref : DatabaseReference!
-        
-        
-        database_ref = Database.database().reference()
+//
+//        var database_ref : DatabaseReference!
+//
+//
+//        database_ref = Database.database().reference()
         
         let currentUser = "1001"
         

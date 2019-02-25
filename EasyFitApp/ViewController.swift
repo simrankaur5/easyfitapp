@@ -12,7 +12,7 @@ import Firebase
 import FirebaseUI
 import FBSDKLoginKit
 import FBSDKCoreKit
-
+import FirebaseDatabase
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
 
@@ -34,6 +34,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     // user found go home screen
                     self.performSegue(withIdentifier:
                         "goHome", sender: self)
+              
+
                 }
                 if let error = error{
                     self.createAlert(title: "Error", message: error.localizedDescription)
@@ -45,7 +47,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    @IBAction func registerPressed(_ sender: Any) {
+    @IBAction func continuePressed(_ sender: Any) {
         if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
         {
             if pass == confirmPass{
@@ -56,8 +58,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     
                     
                     if user != nil{
-                        
-                        self.performSegue(withIdentifier: "regToLogin", sender: self)
+
+                        self.performSegue(withIdentifier: "regToRegMore", sender: self)
                         
                     }
                     if let error = error {
@@ -75,9 +77,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 createAlert(title: "Error", message: "Your passwords do no match")
             }
         }
-        
-        
     }
+
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -89,17 +90,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var registerConfirmPasswordTextField: UITextField!
 
     override func viewDidLoad() {
-        
+        database_ref = Database.database().reference()
         super.viewDidLoad()
 
         let facebookLogin = FBSDKLoginButton()
         view.addSubview(facebookLogin)
         facebookLogin.delegate = self
         facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
-        
-
-    
-//        print(FBSDKAccessToken.currentAccessTokenIsActive())
      
         
         
@@ -107,12 +104,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if FBSDKAccessToken.currentAccessTokenIsActive() == true {
-            self.performSegue(withIdentifier: "goHome", sender: self)
-        }
-        
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        if FBSDKAccessToken.currentAccessTokenIsActive() == true {
+//            self.performSegue(withIdentifier: "goHome", sender: self)
+//        }
+//        
+//    }
    
 
     
@@ -126,45 +123,28 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     func firebaseLogin (_ credential: AuthCredential){
         if let user = Auth.auth().currentUser {
-            // [START link_credential]
+            
             user.linkAndRetrieveData(with: credential) { (authResult, error) in
-                // [START_EXCLUDE]
                 
                     if let error = error {
                         self.createAlert(title: "Error", message: error.localizedDescription)
                         return
                     }
-           
-                
-                // [END_EXCLUDE]
             }
-            // [END link_credential]
         }
         else {
-            // [START signin_credential]
             Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-                // [START_EXCLUDE silent]
                 
-                    // [END_EXCLUDE]
                     if let error = error {
-                        // [START_EXCLUDE]
+                        
                         self.createAlert(title: "Error", message: error.localizedDescription)
-                        // [END_EXCLUDE]
                         return
                     }
+
                 
-                        
-                
-                    // User is signed in
-                    // [START_EXCLUDE]
-                    // Merge prevUser and currentUser accounts and data
-                    // ...
-                    // [END_EXCLUDE]
-                    // [START_EXCLUDE silent]
-                
-                // [END_EXCLUDE]
+
             }
-            // [END signin_credential]
+
         }
     }
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -177,9 +157,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         else{
             let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            //
-                            self.firebaseLogin(credential)
-                            self.performSegue(withIdentifier: "goHome", sender: self)
+//            let user = Auth.auth().currentUser
+            self.firebaseLogin(credential)
+            if let user = Auth.auth().currentUser{
+            database_ref.child("users").child((user.uid)).setValue(["username": user.email])
+            }
+            self.performSegue(withIdentifier: "goHome", sender: self)
         }
         
 ////        var loginSucess = false;
@@ -222,7 +205,39 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
 
 
-    
+    //    @IBAction func registerPressed(_ sender: Any) {
+    //        if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text, let confirmPass = registerConfirmPasswordTextField.text
+    //        {
+    //            if pass == confirmPass{
+    //
+    //
+    //
+    //                Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+    //
+    //
+    //                    if user != nil{
+    //
+    //                        self.performSegue(withIdentifier: "regToRegMore", sender: self)
+    //
+    //                    }
+    //                    if let error = error {
+    //                        self.createAlert(title: "Error", message: error.localizedDescription)
+    //
+    //                    }
+    //
+    //
+    //
+    //
+    //
+    //                }
+    //            }
+    //            else{
+    //                createAlert(title: "Error", message: "Your passwords do no match")
+    //            }
+    //        }
+    //
+    //
+    //    }
 
 }
 

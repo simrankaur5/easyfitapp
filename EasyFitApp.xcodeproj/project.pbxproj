@@ -11,6 +11,7 @@
 		494D3B992221D9AE00A2BF76 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 494D3B9B2221D9AE00A2BF76 /* profileImg.png */; };
 		496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496100C9222084B20013BBC0 /* ProfileViewController.swift */; };
 		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
+		90A0D7FC2223FAFD00C79BC6 /* RegMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
 		90D247B02217536800E7C523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AF2217536800E7C523 /* ViewController.swift */; };
 		90D247B32217536800E7C523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B12217536800E7C523 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		496100C9222084B20013BBC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49E6A79F221C897800534EB2 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../circle.png; sourceTree = "<group>"; };
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegMoreViewController.swift; sourceTree = "<group>"; };
 		90D247AA2217536800E7C523 /* EasyFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AD2217536800E7C523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D247AF2217536800E7C523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */,
 				90D247B12217536800E7C523 /* Main.storyboard */,
 				90E97FAB221CB4BF00160841 /* HomeViewController.swift */,
+				90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */,
 				90E97F992218D34F00160841 /* Images */,
 				90D247B42217536800E7C523 /* Assets.xcassets */,
 				90E97FA622198D9000160841 /* easyft.png */,
@@ -310,6 +313,7 @@
 				90D247B02217536800E7C523 /* ViewController.swift in Sources */,
 				496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */,
 				90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */,
+				90A0D7FC2223FAFD00C79BC6 /* RegMoreViewController.swift in Sources */,
 				90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

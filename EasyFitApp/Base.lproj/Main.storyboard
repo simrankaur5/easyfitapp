@@ -147,8 +147,8 @@
         <!--registerPage-->
         <scene sceneID="qty-7N-zjb">
             <objects>
-                <viewController title="registerPage" id="66j-bS-0rF" customClass="ViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xm1-8N-F5f" customClass="viewController" customModule="EasyFitApp" customModuleProvider="target">
+                <viewController title="registerPage" id="66j-bS-0rF" customClass="RegisterViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xm1-8N-F5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -766,6 +766,6 @@
         <image name="profileImg.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Gp-Og-yby"/>
+        <segue reference="lxD-1h-OZm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -72,7 +72,7 @@
                         <outlet property="emailTextField" destination="C6a-Cy-oit" id="9WQ-Mu-pgf"/>
                         <outlet property="loginButton" destination="BGB-mz-3vj" id="cEH-jb-63k"/>
                         <outlet property="passwordTextField" destination="ryz-lP-1KA" id="0TM-sz-Jwb"/>
-                        <segue destination="Jrg-09-qAx" kind="presentation" identifier="goHome" id="yrT-Aa-SIu"/>
+                        <segue destination="ws4-Ho-GPB" kind="presentation" identifier="goHome" id="Pza-SU-lIL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -446,6 +446,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="3Ux-6A-g0d"/>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
                         <outlet property="calProgress" destination="gXq-B5-9kF" id="FSK-4i-SKZ"/>
@@ -509,6 +510,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UUX-J2-QH2"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cardio" id="32n-9g-vUn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDN-Jw-B1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -524,12 +526,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TSF-sT-VbS"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Strength" id="iXn-6J-6Mb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKB-1A-BOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="80"/>
+            <point key="canvasLocation" x="2894" y="43"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="A9Q-7x-dAk">
             <objects>
                 <viewController id="YuR-R5-gPm" customClass="ProfileViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -809,6 +812,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vpm-JN-fjr"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="CWn-66-5cy"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="currentProgressHL1" destination="CCz-k4-yGa" id="gx6-Bq-vZU"/>
@@ -835,6 +839,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzq-8w-9nM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3628.985507246377" y="279.91071428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ff8-ts-f27">
+            <objects>
+                <tabBarController id="ws4-Ho-GPB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H5k-0y-2yf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jrg-09-qAx" kind="relationship" relationship="viewControllers" id="PN7-PT-jNX"/>
+                        <segue destination="hLf-LA-5fC" kind="relationship" relationship="viewControllers" id="z5e-k1-cFE"/>
+                        <segue destination="Y3i-Hf-6vI" kind="relationship" relationship="viewControllers" id="GKj-WK-aHE"/>
+                        <segue destination="YuR-R5-gPm" kind="relationship" relationship="viewControllers" id="gNw-il-ZyF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFF-li-I8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2443" y="842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R1S-tr-XFD">
@@ -880,6 +904,7 @@
                             <constraint firstAttribute="trailing" secondItem="6Ge-Dk-6kY" secondAttribute="trailing" id="b5x-Hp-6nl"/>
                             <constraint firstAttribute="bottom" secondItem="6Ge-Dk-6kY" secondAttribute="bottom" id="n0y-Sx-gfB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EFe-iO-yZY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvs-xW-5Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -897,6 +922,9 @@
         <image name="profileImg.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="erB-CE-be8"/>
+        <segue reference="gNw-il-ZyF"/>
+        <segue reference="GKj-WK-aHE"/>
+        <segue reference="z5e-k1-cFE"/>
+        <segue reference="6Gp-Og-yby"/>
     </inferredMetricsTieBreakers>
 </document>

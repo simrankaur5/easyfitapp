@@ -446,7 +446,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="3Ux-6A-g0d"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-real-estate-50" id="3Ux-6A-g0d"/>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
                         <outlet property="calProgress" destination="gXq-B5-9kF" id="FSK-4i-SKZ"/>
@@ -507,10 +507,10 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="UUX-J2-QH2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cardio" id="32n-9g-vUn"/>
+                    <tabBarItem key="tabBarItem" title="Cardio" image="icons8-exercise-50" id="32n-9g-vUn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDN-Jw-B1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -526,7 +526,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TSF-sT-VbS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Strength" id="iXn-6J-6Mb"/>
+                    <tabBarItem key="tabBarItem" title="Strength" image="icons8-dumbbell-50" id="iXn-6J-6Mb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKB-1A-BOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,7 +812,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vpm-JN-fjr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="CWn-66-5cy"/>
+                    <tabBarItem key="tabBarItem" tag="-15" title="Profile" image="icons8-customer-filled-50" id="CWn-66-5cy"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="currentProgressHL1" destination="CCz-k4-yGa" id="gx6-Bq-vZU"/>
@@ -847,7 +847,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H5k-0y-2yf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Jrg-09-qAx" kind="relationship" relationship="viewControllers" id="PN7-PT-jNX"/>
@@ -919,6 +918,10 @@
         <image name="iconfinder_Picture13_3289577.png" width="128" height="128"/>
         <image name="iconfinder_dinner-fork-knife-restaurant-dish_3722857.png" width="128" height="128"/>
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
+        <image name="icons8-customer-filled-50" width="37.5" height="37.5"/>
+        <image name="icons8-dumbbell-50" width="37.5" height="37.5"/>
+        <image name="icons8-exercise-50" width="37.5" height="37.5"/>
+        <image name="icons8-real-estate-50" width="37.5" height="37.5"/>
         <image name="profileImg.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

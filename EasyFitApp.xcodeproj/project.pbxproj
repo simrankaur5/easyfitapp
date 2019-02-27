@@ -13,10 +13,10 @@
 		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
 		90A0D7FC2223FAFD00C79BC6 /* RegMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */; };
 		90A0D7FE222433AF00C79BC6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0D7FD222433AF00C79BC6 /* RegisterViewController.swift */; };
+		90CC9E1A222713D2008480E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CC9E19222713D2008480E6 /* Assets.xcassets */; };
 		90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AD2217536800E7C523 /* AppDelegate.swift */; };
 		90D247B02217536800E7C523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D247AF2217536800E7C523 /* ViewController.swift */; };
 		90D247B32217536800E7C523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B12217536800E7C523 /* Main.storyboard */; };
-		90D247B52217536800E7C523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B42217536800E7C523 /* Assets.xcassets */; };
 		90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D247B62217536800E7C523 /* LaunchScreen.storyboard */; };
 		90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D247C3221753E300E7C523 /* GoogleService-Info.plist */; };
 		90E97F962218AC6100160841 /* FacebookBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E97F952218AC6100160841 /* FacebookBridge.m */; };
@@ -38,11 +38,11 @@
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegMoreViewController.swift; sourceTree = "<group>"; };
 		90A0D7FD222433AF00C79BC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		90CC9E19222713D2008480E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D247AA2217536800E7C523 /* EasyFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D247AD2217536800E7C523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D247AF2217536800E7C523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90D247B22217536800E7C523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		90D247B42217536800E7C523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D247B72217536800E7C523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D247B92217536800E7C523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D247C3221753E300E7C523 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				90A0D7FD222433AF00C79BC6 /* RegisterViewController.swift */,
 				90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */,
 				90E97F992218D34F00160841 /* Images */,
-				90D247B42217536800E7C523 /* Assets.xcassets */,
+				90CC9E19222713D2008480E6 /* Assets.xcassets */,
 				90E97FA622198D9000160841 /* easyft.png */,
 				90D247B62217536800E7C523 /* LaunchScreen.storyboard */,
 				90D247B92217536800E7C523 /* Info.plist */,
@@ -221,9 +221,9 @@
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
 				49E6A7A0221C897900534EB2 /* circle.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
-				90D247B52217536800E7C523 /* Assets.xcassets in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
 				90E97F982218D34600160841 /* exercising-clipart-ladies-fitness-5.png in Resources */,
+				90CC9E1A222713D2008480E6 /* Assets.xcassets in Resources */,
 				90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

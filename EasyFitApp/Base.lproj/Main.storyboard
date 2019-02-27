@@ -129,6 +129,13 @@
                                     <action selector="registerPressed:" destination="Zpy-Gv-wqa" eventType="touchUpInside" id="czw-ws-Efj"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-xJ-co1">
+                                <rect key="frame" x="20" y="382" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.023916077130000001" green="0.53870811819999997" blue="0.55822937530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="WnT-aa-bxa"/>
@@ -136,13 +143,14 @@
                     <connections>
                         <outlet property="genderTextField" destination="uc8-6r-ZOB" id="NIO-LU-8j6"/>
                         <outlet property="heightTextField" destination="0WO-dU-mgl" id="lEB-k2-p85"/>
+                        <outlet property="nameTextField" destination="uFy-xJ-co1" id="V5z-po-lRx"/>
                         <outlet property="weightTextField" destination="klV-bD-Xcw" id="fGq-od-M62"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="regMoreToLogin" id="erB-CE-be8"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="regToRegMore" id="erB-CE-be8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UST-fY-SRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1207" y="78"/>
+            <point key="canvasLocation" x="-970" y="78"/>
         </scene>
         <!--registerPage-->
         <scene sceneID="qty-7N-zjb">
@@ -199,7 +207,6 @@
                                 <connections>
                                     <action selector="RegisterTapped:" destination="4Wm-Wi-8hr" eventType="touchUpInside" id="bFT-IK-mgC"/>
                                     <action selector="continuePressed:" destination="66j-bS-0rF" eventType="touchUpInside" id="EVr-wY-NFz"/>
-                                    <segue destination="Zpy-Gv-wqa" kind="presentation" identifier="regToRegMore" id="80v-u6-Ydn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97a-dA-rqu">
@@ -234,6 +241,7 @@
                         <outlet property="registerConfirmPasswordTextField" destination="9dz-2W-Z5l" id="NhO-67-rg0"/>
                         <outlet property="registerEmailTextField" destination="DKc-ly-wuN" id="4Rv-OO-DWf"/>
                         <outlet property="registerPasswordTextField" destination="6Dl-zQ-GVM" id="Ece-8r-UJh"/>
+                        <segue destination="Zpy-Gv-wqa" kind="showDetail" id="stE-rM-oDH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obw-0z-WXB" userLabel="First Responder" sceneMemberID="firstResponder"/>

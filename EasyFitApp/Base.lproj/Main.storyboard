@@ -818,9 +818,9 @@
         <image name="iconfinder_Picture13_3289577.png" width="128" height="128"/>
         <image name="iconfinder_dinner-fork-knife-restaurant-dish_3722857.png" width="128" height="128"/>
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
-        <image name="profileImg.png" width="96" height="96"/>
+        <image name="profileImg.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Gp-Og-yby"/>
+        <segue reference="erB-CE-be8"/>
     </inferredMetricsTieBreakers>
 </document>

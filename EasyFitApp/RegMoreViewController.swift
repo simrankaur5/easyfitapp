@@ -30,11 +30,15 @@ class RegMoreViewController: UIViewController {
     @IBAction func registerPressed(_ sender: Any) {
         if let height = heightTextField.text, let gender = genderTextField.text , let weight = weightTextField.text , let name = nameTextField.text {
             if let user = Auth.auth().currentUser {
-                database_ref.child("users/\(user.uid)/name").setValue(name)
-                database_ref.child("users/\(user.uid)/weight").setValue(weight)
-                database_ref.child("users/\(user.uid)/height").setValue(height)
-                database_ref.child("users/\(user.uid)/gender").setValue(gender)
-                database_ref.child("users").child((user.uid)).setValue(["username": user.email])
+                database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
+                database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
+                database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(2000)
+                database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+                
+                
+                database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
+                database_ref.child("users/\(user.uid)/personal/height").setValue(height)
+                database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
                 
             }
             self.performSegue(withIdentifier: "regMoreToLogin", sender: self)

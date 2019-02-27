@@ -12,4 +12,5 @@ target 'EasyFitApp' do
     pod 'FBSDKCoreKit'
 	pod 'FBSDKLoginKit'
 	pod 'Firebase/Database'
+	pod 'MBCircularProgressBar'
 end

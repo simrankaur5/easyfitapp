@@ -863,7 +863,7 @@
         <!--View Controller-->
         <scene sceneID="R1S-tr-XFD">
             <objects>
-                <viewController id="VLb-qy-hfw" sceneMemberID="viewController">
+                <viewController id="VLb-qy-hfw" customClass="RSSViewController" customModule="EasyFitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRw-Wg-hzf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="971"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -919,7 +919,7 @@
         <image name="iconfinder_Picture13_3289577.png" width="128" height="128"/>
         <image name="iconfinder_dinner-fork-knife-restaurant-dish_3722857.png" width="128" height="128"/>
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
-        <image name="profileImg.png" width="512" height="512"/>
+        <image name="profileImg.png" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gNw-il-ZyF"/>

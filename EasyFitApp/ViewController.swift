@@ -13,6 +13,17 @@ import FirebaseUI
 import FBSDKLoginKit
 import FBSDKCoreKit
 import FirebaseDatabase
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 class ViewController: UIViewController {
     
 
@@ -59,7 +70,7 @@ class ViewController: UIViewController {
         database_ref = Database.database().reference()
         super.viewDidLoad()
 
-
+        self.hideKeyboardWhenTappedAround()
         
   
     

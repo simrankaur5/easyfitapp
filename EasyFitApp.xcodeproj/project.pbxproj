@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1BBA58E4582D050D8FA67F2A /* Pods_EasyFitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */; };
-		494D3B992221D9AE00A2BF76 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 494D3B9B2221D9AE00A2BF76 /* profileImg.png */; };
 		496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496100C9222084B20013BBC0 /* ProfileViewController.swift */; };
 		49AFF0BD22283ECA00C28E18 /* RSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFF0BC22283ECA00C28E18 /* RSSViewController.swift */; };
 		49AFF0BF2228435A00C28E18 /* ParseRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFF0BE2228435A00C28E18 /* ParseRSS.swift */; };
-		49E6A7A0221C897900534EB2 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6A79F221C897800534EB2 /* circle.png */; };
 		90A0D7FC2223FAFD00C79BC6 /* RegMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */; };
 		90A0D7FE222433AF00C79BC6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0D7FD222433AF00C79BC6 /* RegisterViewController.swift */; };
 		90CC9E1A222713D2008480E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CC9E19222713D2008480E6 /* Assets.xcassets */; };
@@ -29,16 +27,25 @@
 		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 		90E97FA722198D9000160841 /* easyft.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA622198D9000160841 /* easyft.png */; };
 		90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E97FAB221CB4BF00160841 /* HomeViewController.swift */; };
+		9A9AF2472229B172004DC7B1 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9AF2462229B172004DC7B1 /* circle.png */; };
+		9A9AF2492229B17C004DC7B1 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9AF2482229B17C004DC7B1 /* profileImg.png */; };
+		9A9AF24C2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF24A2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld */; };
+		9A9AF24E2229B494004DC7B1 /* CardioDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF24D2229B494004DC7B1 /* CardioDetailsViewController.swift */; };
+		9A9AF2502229B4A3004DC7B1 /* CardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF24F2229B4A3004DC7B1 /* CardioViewController.swift */; };
+		9A9AF2532229BC87004DC7B1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF2522229BC87004DC7B1 /* CoreDataStack.swift */; };
+		9A9AF2562229BCB7004DC7B1 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF2552229BCB7004DC7B1 /* FormatDisplay.swift */; };
+		9A9AF2582229BCC5004DC7B1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF2572229BCC5004DC7B1 /* LocationManager.swift */; };
+		9A9AF25A2229BCDE004DC7B1 /* MulticolorPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF2592229BCDE004DC7B1 /* MulticolorPolyline.swift */; };
+		9A9AF25C2229BCEA004DC7B1 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF25B2229BCEA004DC7B1 /* StoryboardSupport.swift */; };
+		9A9AF25E2229BCF6004DC7B1 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF25D2229BCF6004DC7B1 /* UnitExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		129600FB5245D6770E2477ED /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 		2BFB7072C79A72B91662AF9E /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
-		494D3B9A2221D9AE00A2BF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/profileImg.png; sourceTree = "<group>"; };
 		496100C9222084B20013BBC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49AFF0BC22283ECA00C28E18 /* RSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSViewController.swift; sourceTree = "<group>"; };
 		49AFF0BE2228435A00C28E18 /* ParseRSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseRSS.swift; sourceTree = "<group>"; };
-		49E6A79F221C897800534EB2 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../circle.png; sourceTree = "<group>"; };
 		68AB7EA961FD1C0940337510 /* Pods_EasyFitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A0D7FB2223FAFD00C79BC6 /* RegMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegMoreViewController.swift; sourceTree = "<group>"; };
 		90A0D7FD222433AF00C79BC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +67,17 @@
 		90E97FA622198D9000160841 /* easyft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easyft.png; sourceTree = "<group>"; };
 		90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyFitApp.entitlements; sourceTree = "<group>"; };
 		90E97FAB221CB4BF00160841 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9A9AF2462229B172004DC7B1 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		9A9AF2482229B17C004DC7B1 /* profileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileImg.png; sourceTree = "<group>"; };
+		9A9AF24B2229B3BF004DC7B1 /* easyfitmodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = easyfitmodel.xcdatamodel; sourceTree = "<group>"; };
+		9A9AF24D2229B494004DC7B1 /* CardioDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioDetailsViewController.swift; sourceTree = "<group>"; };
+		9A9AF24F2229B4A3004DC7B1 /* CardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioViewController.swift; sourceTree = "<group>"; };
+		9A9AF2522229BC87004DC7B1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9A9AF2552229BCB7004DC7B1 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		9A9AF2572229BCC5004DC7B1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9A9AF2592229BCDE004DC7B1 /* MulticolorPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticolorPolyline.swift; sourceTree = "<group>"; };
+		9A9AF25B2229BCEA004DC7B1 /* StoryboardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
+		9A9AF25D2229BCF6004DC7B1 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 		D3652685547832073676DD89 /* Pods-EasyFitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.debug.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DD3BE6AEAD9F5D3184BB74 /* Pods-EasyFitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFitApp.release.xcconfig"; path = "Target Support Files/Pods-EasyFitApp/Pods-EasyFitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +134,8 @@
 		90D247AC2217536800E7C523 /* EasyFitApp */ = {
 			isa = PBXGroup;
 			children = (
+				9A9AF2542229BCA7004DC7B1 /* Supporting Files */,
+				9A9AF2512229BC78004DC7B1 /* CoreData */,
 				90E97F952218AC6100160841 /* FacebookBridge.m */,
 				49AFF0BE2228435A00C28E18 /* ParseRSS.swift */,
 				90E97F942218AC5900160841 /* EasyFitApp-Bridging-Header.h */,
@@ -134,6 +154,8 @@
 				90D247B92217536800E7C523 /* Info.plist */,
 				90D247C3221753E300E7C523 /* GoogleService-Info.plist */,
 				496100C9222084B20013BBC0 /* ProfileViewController.swift */,
+				9A9AF24D2229B494004DC7B1 /* CardioDetailsViewController.swift */,
+				9A9AF24F2229B4A3004DC7B1 /* CardioViewController.swift */,
 			);
 			path = EasyFitApp;
 			sourceTree = "<group>";
@@ -141,15 +163,36 @@
 		90E97F992218D34F00160841 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				494D3B9B2221D9AE00A2BF76 /* profileImg.png */,
+				9A9AF2482229B17C004DC7B1 /* profileImg.png */,
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
+				9A9AF2462229B172004DC7B1 /* circle.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
-				49E6A79F221C897800534EB2 /* circle.png */,
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
 				90E97FA22218D6C800160841 /* iconfinder_icons_user_1564534.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		9A9AF2512229BC78004DC7B1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9A9AF2522229BC87004DC7B1 /* CoreDataStack.swift */,
+				9A9AF24A2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		9A9AF2542229BCA7004DC7B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A9AF2552229BCB7004DC7B1 /* FormatDisplay.swift */,
+				9A9AF2572229BCC5004DC7B1 /* LocationManager.swift */,
+				9A9AF2592229BCDE004DC7B1 /* MulticolorPolyline.swift */,
+				9A9AF25B2229BCEA004DC7B1 /* StoryboardSupport.swift */,
+				9A9AF25D2229BCF6004DC7B1 /* UnitExtensions.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +265,10 @@
 				90E97FA12218D68400160841 /* iconfinder_Picture13_3289577.png in Resources */,
 				90E97F9F2218D5BF00160841 /* iconfinder_65_171424.png in Resources */,
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
-				494D3B992221D9AE00A2BF76 /* profileImg.png in Resources */,
+				9A9AF2492229B17C004DC7B1 /* profileImg.png in Resources */,
+				9A9AF2472229B172004DC7B1 /* circle.png in Resources */,
 				90E97FA722198D9000160841 /* easyft.png in Resources */,
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
-				49E6A7A0221C897900534EB2 /* circle.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,
 				90D247B32217536800E7C523 /* Main.storyboard in Resources */,
 				90E97F982218D34600160841 /* exercising-clipart-ladies-fitness-5.png in Resources */,
@@ -325,13 +368,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E97F962218AC6100160841 /* FacebookBridge.m in Sources */,
+				9A9AF2562229BCB7004DC7B1 /* FormatDisplay.swift in Sources */,
+				9A9AF2582229BCC5004DC7B1 /* LocationManager.swift in Sources */,
 				49AFF0BD22283ECA00C28E18 /* RSSViewController.swift in Sources */,
 				90D247B02217536800E7C523 /* ViewController.swift in Sources */,
+				9A9AF25C2229BCEA004DC7B1 /* StoryboardSupport.swift in Sources */,
+				9A9AF24C2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld in Sources */,
+				9A9AF25E2229BCF6004DC7B1 /* UnitExtensions.swift in Sources */,
 				49AFF0BF2228435A00C28E18 /* ParseRSS.swift in Sources */,
 				90A0D7FE222433AF00C79BC6 /* RegisterViewController.swift in Sources */,
+				9A9AF2532229BC87004DC7B1 /* CoreDataStack.swift in Sources */,
+				9A9AF25A2229BCDE004DC7B1 /* MulticolorPolyline.swift in Sources */,
 				496100CA222084B20013BBC0 /* ProfileViewController.swift in Sources */,
+				9A9AF24E2229B494004DC7B1 /* CardioDetailsViewController.swift in Sources */,
 				90D247AE2217536800E7C523 /* AppDelegate.swift in Sources */,
 				90A0D7FC2223FAFD00C79BC6 /* RegMoreViewController.swift in Sources */,
+				9A9AF2502229B4A3004DC7B1 /* CardioViewController.swift in Sources */,
 				90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,15 +391,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		494D3B9B2221D9AE00A2BF76 /* profileImg.png */ = {
-			isa = PBXVariantGroup;
-			children = (
-				494D3B9A2221D9AE00A2BF76 /* Base */,
-			);
-			name = profileImg.png;
-			path = ../../../../Downloads;
-			sourceTree = "<group>";
-		};
 		90D247B12217536800E7C523 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -551,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A9AF24A2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A9AF24B2229B3BF004DC7B1 /* easyfitmodel.xcdatamodel */,
+			);
+			currentVersion = 9A9AF24B2229B3BF004DC7B1 /* easyfitmodel.xcdatamodel */;
+			path = easyfitmodel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 90D247A22217536800E7C523 /* Project object */;
 }

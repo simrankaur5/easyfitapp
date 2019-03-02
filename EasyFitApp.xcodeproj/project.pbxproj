@@ -27,7 +27,6 @@
 		90E97FA52218D74F00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */; };
 		90E97FA722198D9000160841 /* easyft.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E97FA622198D9000160841 /* easyft.png */; };
 		90E97FAC221CB4BF00160841 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E97FAB221CB4BF00160841 /* HomeViewController.swift */; };
-		9A9AF2472229B172004DC7B1 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9AF2462229B172004DC7B1 /* circle.png */; };
 		9A9AF2492229B17C004DC7B1 /* profileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9AF2482229B17C004DC7B1 /* profileImg.png */; };
 		9A9AF24C2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF24A2229B3BF004DC7B1 /* easyfitmodel.xcdatamodeld */; };
 		9A9AF24E2229B494004DC7B1 /* CardioDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AF24D2229B494004DC7B1 /* CardioDetailsViewController.swift */; };
@@ -67,7 +66,6 @@
 		90E97FA622198D9000160841 /* easyft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easyft.png; sourceTree = "<group>"; };
 		90E97FA8221A19BC00160841 /* EasyFitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyFitApp.entitlements; sourceTree = "<group>"; };
 		90E97FAB221CB4BF00160841 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9A9AF2462229B172004DC7B1 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		9A9AF2482229B17C004DC7B1 /* profileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileImg.png; sourceTree = "<group>"; };
 		9A9AF24B2229B3BF004DC7B1 /* easyfitmodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = easyfitmodel.xcdatamodel; sourceTree = "<group>"; };
 		9A9AF24D2229B494004DC7B1 /* CardioDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioDetailsViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			children = (
 				9A9AF2482229B17C004DC7B1 /* profileImg.png */,
 				90E97F972218D34500160841 /* exercising-clipart-ladies-fitness-5.png */,
-				9A9AF2462229B172004DC7B1 /* circle.png */,
 				90E97F9E2218D5BF00160841 /* iconfinder_65_171424.png */,
 				90E97FA02218D68400160841 /* iconfinder_Picture13_3289577.png */,
 				90E97FA42218D74E00160841 /* iconfinder_dinner-fork-knife-restaurant-dish_3722857.png */,
@@ -266,7 +263,6 @@
 				90E97F9F2218D5BF00160841 /* iconfinder_65_171424.png in Resources */,
 				90D247B82217536800E7C523 /* LaunchScreen.storyboard in Resources */,
 				9A9AF2492229B17C004DC7B1 /* profileImg.png in Resources */,
-				9A9AF2472229B172004DC7B1 /* circle.png in Resources */,
 				90E97FA722198D9000160841 /* easyft.png in Resources */,
 				90E97FA32218D6C900160841 /* iconfinder_icons_user_1564534.png in Resources */,
 				90D247C4221753E300E7C523 /* GoogleService-Info.plist in Resources */,

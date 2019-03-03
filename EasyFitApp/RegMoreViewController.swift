@@ -39,6 +39,7 @@ class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerV
     func createGenderPickerView(){
         let genderPicker = UIPickerView()
         genderPicker.delegate = self
+        genderTextField.text = genderArray[0]
         genderTextField.inputView = genderPicker
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -68,29 +69,41 @@ class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerV
     @IBAction func registerPressed(_ sender: Any) {
         
         if let height = heightTextField.text, let gender = genderTextField.text, let weight = weightTextField.text , let name = nameTextField.text , let calorie = Int(CalorieTextField.text!) {
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            let result = formatter.string(from: date)
                     if let user = Auth.auth().currentUser {
+                        
+
                         if FBSDKAccessToken.current() != nil {
                             database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
                             database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
                             database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(calorie)
                             database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/creationDate").setValue(result)
                             database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
                             database_ref.child("users/\(user.uid)/personal/height").setValue(height)
-                            database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)    
+                            database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+                            nameTextField.text = user.displayName
                             database_ref.child("users/\(user.uid)/personal/name").setValue(user.displayName)
+                            self.performSegue(withIdentifier: "regMoreToHome", sender: self)
                         }
                         else {
                             database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
                             database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
                             database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(calorie)
                             database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/creationDate").setValue(result)
                             database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
                             database_ref.child("users/\(user.uid)/personal/height").setValue(height)
                             database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+                            database_ref.child("users/\(user.uid)/personal/name").setValue(name)
+                            self.performSegue(withIdentifier: "regMoreToHome", sender: self)
                         }
         
                     }
-                    self.performSegue(withIdentifier: "regMoreToLogin", sender: self)
+            
                 }
                 else{
                     ViewController().createAlert(title: "error",message: "Please fill in all the fields")

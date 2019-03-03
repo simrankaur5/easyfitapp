@@ -13,7 +13,7 @@ import FirebaseUI
 import FBSDKLoginKit
 import FBSDKCoreKit
 import FirebaseDatabase
-var createUserComplete = false;
+
 class RegisterViewController: UIViewController{
 
     
@@ -36,8 +36,7 @@ class RegisterViewController: UIViewController{
                         
                         
                         if user != nil{
-                            createUserComplete = true
-                            self.performSegue(withIdentifier: "regToRegMore", sender: self)
+                            self.performSegue(withIdentifier:"regToRegMore", sender: self)
                             
                         }
                         if let error = error {

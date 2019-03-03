@@ -160,6 +160,7 @@ class ProfileViewController: UIViewController {
         
         database_ref.child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
             
+            
             //Snapshot NSDictionary
             let value = snapshot.value as? NSDictionary
             

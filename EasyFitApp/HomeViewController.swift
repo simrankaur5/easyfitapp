@@ -48,8 +48,8 @@ class HomeViewController: UIViewController {
         lvlLabel.font = lvlLabel.font.withSize(40)
         
 
-        calProgress.tintColor = .yellow
-        calProgress.trackTintColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
+        calProgress.tintColor = .purple
+        calProgress.trackTintColor = UIColor(red: 58, green: 138, blue: 143 , alpha: 1.0)
         
         
 //        //Scaling cal progress bar

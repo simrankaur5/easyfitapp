@@ -124,7 +124,7 @@ class HomeViewController: UIViewController {
 
         var welcomeName = ""
         if (Auth.auth().currentUser?.displayName) != nil{
-            welcomeName = (Auth.auth().currentUser?.email)!
+            welcomeName = (Auth.auth().currentUser?.displayName)!
         }
 
         welcomeLabel.adjustsFontSizeToFitWidth = true

@@ -14,7 +14,7 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import FirebaseDatabase
 var createUserComplete = false;
-class RegisterViewController: UIViewController, FBSDKLoginButtonDelegate{
+class RegisterViewController: UIViewController{
 
     
     @IBOutlet weak var registerEmailTextField: UITextField!
@@ -67,88 +67,14 @@ class RegisterViewController: UIViewController, FBSDKLoginButtonDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let facebookLogin = FBSDKLoginButton()
-        view.addSubview(facebookLogin)
-        facebookLogin.delegate = self
-        facebookLogin.frame = CGRect(x: 20, y: 700, width: view.frame.width - 32, height: 40)
-        
+
+
         
         // Do any additional setup after loading the view.
     }
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-        
-        
-    }
-    func firebaseLogin (_ credential: AuthCredential){
-        if let user = Auth.auth().currentUser {
-            user.linkAndRetrieveData(with: credential) { (authResult, error) in
-                
-                if let error = error {
-                    ViewController().createAlert(title: "Error", message: error.localizedDescription)
-                    return
-                }
-            }
-        }
-        else {
-            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-                
-                if let error = error {
-                    
-                    ViewController().createAlert(title: "Error", message: error.localizedDescription)
-                    return
-                }
-                
-                
-                
-            }
-            
-        }
-    }
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if  let email = registerEmailTextField.text, let pass = registerPasswordTextField.text
-        {
-                Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
-                    
-                    
-                    if user != nil{
-                        createUserComplete = true
-                        self.performSegue(withIdentifier: "regToRegMore", sender: self)
-                        
-                    }
-                    if let error = error {
-                        ViewController().createAlert(title: "Error", message: error.localizedDescription)
-                        
-                    }
-                    
-                    
-                    
-                    
-                    
-                }
-            }
 
-    
-        
-        else{
-             ViewController().createAlert(title: "Error", message: error.localizedDescription)
-        }
 
-        if let error = error{
-            ViewController().createAlert(title: "Error", message: error.localizedDescription);
-            
-        }
-        else if result.isCancelled{
-            ViewController().createAlert(title: "Error", message: "Facebook login cancelled")
-        }
-        else{
-            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            self.firebaseLogin(credential)
 
-            self.performSegue(withIdentifier: "regToRegMore", sender: self)
-        }
-
-}
 
 
 

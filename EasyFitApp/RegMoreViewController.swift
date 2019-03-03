@@ -13,39 +13,118 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import UIKit
 
-class RegMoreViewController: UIViewController {
+class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerViewDataSource {
 
+    let genderArray = ["Male","Female"]
+
+    @IBOutlet weak var genderTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        
-        // Do any additional setup after loading the view.
-    }
-    
+        createGenderPickerView()
+        createToolBar(textfield: genderTextField)
 
+    }
     @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var CalorieTextField: UITextField!
+    
     @IBOutlet weak var heightTextField: UITextField!
+    
     @IBOutlet weak var weightTextField: UITextField!
-    @IBOutlet weak var genderTextField: UITextField!
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func createGenderPickerView(){
+        let genderPicker = UIPickerView()
+        genderPicker.delegate = self
+        genderTextField.inputView = genderPicker
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return genderArray.count
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        genderTextField.text = genderArray[row]
+
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genderArray[row]
+    }
+
+
+    func  createToolBar(textfield: UITextField) {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain ,target: self, action: #selector(ViewController.dismissKeyboard))
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textfield.inputAccessoryView = toolBar
+    }
+
     @IBAction func registerPressed(_ sender: Any) {
-        if let height = heightTextField.text, let gender = genderTextField.text , let weight = weightTextField.text , let name = nameTextField.text {
-            if let user = Auth.auth().currentUser {
-                database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
-                database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
-                database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(2000)
-                database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
-                
-                
-                database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
-                database_ref.child("users/\(user.uid)/personal/height").setValue(height)
-                database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
-                
-            }
-            self.performSegue(withIdentifier: "regMoreToLogin", sender: self)
-        }
-        else{
-            ViewController().createAlert(title: "error",message: "Please fill in all the fields")
+        
+        if let height = heightTextField.text, let gender = genderTextField.text, let weight = weightTextField.text , let name = nameTextField.text , let calorie = Int(CalorieTextField.text!) {
+                    if let user = Auth.auth().currentUser {
+                        if FBSDKAccessToken.current() != nil {
+                            database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(calorie)
+                            database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+                            database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
+                            database_ref.child("users/\(user.uid)/personal/height").setValue(height)
+                            database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)    
+                            database_ref.child("users/\(user.uid)/personal/name").setValue(user.displayName)
+                        }
+                        else {
+                            database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(calorie)
+                            database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+                            database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
+                            database_ref.child("users/\(user.uid)/personal/height").setValue(height)
+                            database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+                        }
+        
                     }
+                    self.performSegue(withIdentifier: "regMoreToLogin", sender: self)
+                }
+                else{
+                    ViewController().createAlert(title: "error",message: "Please fill in all the fields")
+                            }
+    }
+    //    @IBAction func registerPressed(_ sender: Any) {
+//        if let height = heightTextField.text, let gender = Gender, let weight = weightTextField.text , let name = nameTextField.text {
+//            if let user = Auth.auth().currentUser {
+//                if FBSDKAccessToken.current() != nil {
+//                    database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
+//                    database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
+//                    database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(2000)
+//                    database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+//                    database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
+//                    database_ref.child("users/\(user.uid)/personal/height").setValue(height)
+//                    database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+//                    database_ref.child("users/\(user.uid)/personal/name").setValue(user.displayName)
+//                }
+//                else {
+//                    database_ref.child("users/\(user.uid)/stats/lvl").setValue(0)
+//                    database_ref.child("users/\(user.uid)/stats/xp").setValue(0)
+//                    database_ref.child("users/\(user.uid)/stats/calorie_limit").setValue(2000)
+//                    database_ref.child("users/\(user.uid)/stats/calories").setValue(0)
+//                    database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
+//                    database_ref.child("users/\(user.uid)/personal/height").setValue(height)
+//                    database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+//                }
+//
+//            }
+//            self.performSegue(withIdentifier: "regMoreToLogin", sender: self)
+//        }
+//        else{
+//            ViewController().createAlert(title: "error",message: "Please fill in all the fields")
+//                    }
     }
     /*
     // MARK: - Navigation
@@ -57,4 +136,4 @@ class RegMoreViewController: UIViewController {
     }
     */
 
-}
+

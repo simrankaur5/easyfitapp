@@ -22,7 +22,7 @@ class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerV
         super.viewDidLoad()
         createGenderPickerView()
         createToolBar(textfield: genderTextField)
-
+        self.hideKeyboardWhenTappedAround()
     }
     @IBOutlet weak var nameTextField: UITextField!
     

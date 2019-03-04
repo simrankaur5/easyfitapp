@@ -1134,13 +1134,22 @@
                                                 <rect key="frame" x="192" y="659" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yPK-ep-IhN">
+                                                <rect key="frame" x="87" y="313" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="7Hs-00-no7"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ABV-Ij-oss" secondAttribute="trailing" constant="176" id="L7P-Gd-GiX"/>
                                             <constraint firstItem="ABV-Ij-oss" firstAttribute="leading" secondItem="D7N-Sa-tPa" secondAttribute="leading" constant="192" id="P96-kW-dIv"/>
                                             <constraint firstAttribute="bottom" secondItem="ABV-Ij-oss" secondAttribute="bottom" constant="212" id="Rme-CM-Fsi"/>
-                                            <constraint firstItem="ABV-Ij-oss" firstAttribute="top" secondItem="D7N-Sa-tPa" secondAttribute="top" constant="659" id="XaV-hq-d5a"/>
+                                            <constraint firstAttribute="trailing" secondItem="yPK-ep-IhN" secondAttribute="trailing" constant="87" id="dQY-Dp-YCZ"/>
+                                            <constraint firstItem="yPK-ep-IhN" firstAttribute="leading" secondItem="D7N-Sa-tPa" secondAttribute="leading" constant="87" id="hXY-YD-3fc"/>
+                                            <constraint firstItem="ABV-Ij-oss" firstAttribute="top" secondItem="yPK-ep-IhN" secondAttribute="bottom" constant="218" id="hjn-E6-eiN"/>
+                                            <constraint firstItem="yPK-ep-IhN" firstAttribute="top" secondItem="D7N-Sa-tPa" secondAttribute="top" constant="313" id="zzh-xA-fsV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1162,6 +1171,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EFe-iO-yZY"/>
                     </view>
+                    <connections>
+                        <outlet property="testImage" destination="yPK-ep-IhN" id="sjF-IS-S03"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvs-xW-5Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

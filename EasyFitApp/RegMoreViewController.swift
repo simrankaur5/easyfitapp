@@ -85,6 +85,8 @@ class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerV
                             database_ref.child("users/\(user.uid)/personal/weight").setValue(weight)
                             database_ref.child("users/\(user.uid)/personal/height").setValue(height)
                             database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
+                            database_ref.child("users/\(user.uid)/stats/current_distance").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/current_pace").setValue(0)
                             nameTextField.text = user.displayName
                             database_ref.child("users/\(user.uid)/personal/name").setValue(user.displayName)
                             self.performSegue(withIdentifier: "regMoreToHome", sender: self)
@@ -99,6 +101,8 @@ class RegMoreViewController: UIViewController , UIPickerViewDelegate , UIPickerV
                             database_ref.child("users/\(user.uid)/personal/height").setValue(height)
                             database_ref.child("users/\(user.uid)/personal/gender").setValue(gender)
                             database_ref.child("users/\(user.uid)/personal/name").setValue(name)
+                            database_ref.child("users/\(user.uid)/stats/current_distance").setValue(0)
+                            database_ref.child("users/\(user.uid)/stats/current_pace").setValue(0)
                             self.performSegue(withIdentifier: "regMoreToHome", sender: self)
                         }
         

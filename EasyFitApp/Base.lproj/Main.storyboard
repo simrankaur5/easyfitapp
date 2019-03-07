@@ -488,8 +488,9 @@
                                     <constraint firstAttribute="height" constant="20" id="8Sj-0a-c66"/>
                                 </constraints>
                             </stackView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-84-bYZ">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-84-bYZ">
                                 <rect key="frame" x="0.0" y="429" width="414" height="1421"/>
+                                <color key="backgroundColor" red="0.019695455210000001" green="0.54511862990000004" blue="0.56920456890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="jPj-Rp-VhG"/>
                                 </constraints>
@@ -1281,7 +1282,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.019695455210000001" green="0.54511862990000004" blue="0.56920456890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Vyd-aE-VqO" firstAttribute="top" secondItem="vZ2-6X-2am" secondAttribute="bottom" constant="10" id="CEC-PA-LQd"/>
                                             <constraint firstItem="F9p-am-G3j" firstAttribute="top" secondItem="mMN-b7-YZ9" secondAttribute="bottom" constant="10" id="DoV-Bd-fxY"/>
@@ -1312,7 +1313,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.019695455208420753" green="0.54511862993240356" blue="0.56920456886291504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Ge-Dk-6kY" firstAttribute="trailing" secondItem="EFe-iO-yZY" secondAttribute="trailing" id="7j1-iu-l9R"/>
                             <constraint firstAttribute="bottom" secondItem="6Ge-Dk-6kY" secondAttribute="bottom" id="Loy-bW-iJG"/>
@@ -1354,7 +1355,6 @@
         <image name="purpleeasy" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fh6-F7-Wv9"/>
         <segue reference="5gr-Zp-a4M"/>
         <segue reference="Cvp-QV-10h"/>
         <segue reference="vcY-4n-C8c"/>

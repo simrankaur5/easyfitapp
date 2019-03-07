@@ -12,13 +12,91 @@ import FeedKit
 
 class RSSViewController: UIViewController {
 
-    @IBOutlet weak var testImage: UIImageView!
     
+    
+    @IBOutlet weak var rssLabel1: UILabel!
+    @IBOutlet weak var rssButton1: UIButton!
+    
+    @IBOutlet weak var rssLabel2: UILabel!
+    @IBOutlet weak var rssButton2: UIButton!
+    
+    @IBOutlet weak var rssLabel3: UILabel!
+    @IBOutlet weak var rssButton3: UIButton!
+    
+    @IBOutlet weak var rssLabel4: UILabel!
+    @IBOutlet weak var rssButton4: UIButton!
+    
+    @IBOutlet weak var rssLabel5: UILabel!
+    @IBOutlet weak var rssButton5: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        assignButtonImages()
+    }
+    
+    func assignButtonImages()
+    {
+        let feedURL = URL(string: "https://www.runtastic.com/blog/en/feed/")!
+        let parser = FeedParser(URL: feedURL)
+        
+        let result = parser.parse()
+        
+        guard let feed = result.rssFeed, result.isSuccess else {
+            print(result.error)
+            return
+        }
+        
+        //RSS BUTTON1  AND LABEL1
+        var item = feed.items?[1]
+        
+        var url = URL(string: item!.enclosure!.attributes!.url!)
+        var data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton1.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssLabel1.text = item!.title!
+        
+        //RSS BUTTON2  AND LABEL2
+        item = feed.items?[2]
+        
+        url = URL(string: item!.enclosure!.attributes!.url!)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton2.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssLabel2.text = item!.title!
+    
+        //RSS BUTTON3  AND LABEL3
+        item = feed.items?[3]
+        
+        url = URL(string: item!.enclosure!.attributes!.url!)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton3.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssLabel3.text = item!.title!
+        
+        //RSS BUTTON4  AND LABEL4
+        item = feed.items?[4]
+        
+        url = URL(string: item!.enclosure!.attributes!.url!)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton4.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssLabel4.text = item!.title!
+        
+        //RSS BUTTON2  AND LABEL2
+        item = feed.items?[5]
+        
+        url = URL(string: item!.enclosure!.attributes!.url!)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton5.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssLabel5.text = item!.title!
+        
+        
+        
+        
+    }
+    
+ 
+    func buttonLinkRedirect(number: Int)
+    {
         
         let feedURL = URL(string: "https://www.runtastic.com/blog/en/feed/")!
         let parser = FeedParser(URL: feedURL)
@@ -30,16 +108,41 @@ class RSSViewController: UIViewController {
             return
         }
         
-        let item = feed.items?[1]
-        print(item!.title)
-        print(item!.link)
-        print(item!.enclosure!.attributes!.url)
+        let item = feed.items?[number]
+        var theLink:String = item!.link!
+        UIApplication.shared.open(URL(string: theLink)! as URL, options: [:], completionHandler: nil)
         
-        let url = URL(string: item!.enclosure!.attributes!.url!)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        testImage.image = UIImage(data: data!)
+        
         
     }
+    
+    @IBAction func rssButton1Click(_ sender: Any) {
+        buttonLinkRedirect(number: 1)
+        
+    }
+    
+    @IBAction func rssButton2Click(_ sender: Any) {
+        buttonLinkRedirect(number: 2)
+        
+    }
+    
+    @IBAction func rssButton3Click(_ sender: Any) {
+        buttonLinkRedirect(number: 3)
+        
+    }
+    
+    @IBAction func rssButton4Click(_ sender: Any) {
+        buttonLinkRedirect(number: 4)
+        
+    }
+    
+    @IBAction func rssButtonClick5(_ sender: Any) {
+        buttonLinkRedirect(number: 5)
+        
+    }
+    
+    
+    
     
     
     override func viewDidAppear(_ animated: Bool){

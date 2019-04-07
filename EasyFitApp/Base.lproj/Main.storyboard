@@ -985,13 +985,13 @@
                     <tabBarItem key="tabBarItem" tag="-15" title="Profile" image="icons8-customer-filled-50" id="CWn-66-5cy"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
-                        <outlet property="currentProgressHL1" destination="CCz-k4-yGa" id="gx6-Bq-vZU"/>
-                        <outlet property="currentProgressHL2" destination="ERr-v6-bBt" id="ZFO-lh-OX9"/>
-                        <outlet property="currentProgressHL3" destination="WBm-dy-QSc" id="Qgk-Qj-KYw"/>
-                        <outlet property="currentProgressL1" destination="YdN-x9-Pyi" id="9Jt-lq-dFg"/>
-                        <outlet property="currentProgressL2" destination="eqY-iW-w7A" id="ldL-u2-xjz"/>
-                        <outlet property="currentProgressL3" destination="2Ak-a7-glo" id="9gS-BF-oCr"/>
-                        <outlet property="currentProgressMainL" destination="Wht-1z-bfi" id="ZoO-10-pGd"/>
+                        <outlet property="detailsHL1" destination="CCz-k4-yGa" id="gx6-Bq-vZU"/>
+                        <outlet property="detailsHL2" destination="ERr-v6-bBt" id="ZFO-lh-OX9"/>
+                        <outlet property="detailsHL3" destination="WBm-dy-QSc" id="Qgk-Qj-KYw"/>
+                        <outlet property="detailsL1" destination="YdN-x9-Pyi" id="9Jt-lq-dFg"/>
+                        <outlet property="detailsL2" destination="eqY-iW-w7A" id="ldL-u2-xjz"/>
+                        <outlet property="detailsL3" destination="2Ak-a7-glo" id="9gS-BF-oCr"/>
+                        <outlet property="detailsMainL" destination="Wht-1z-bfi" id="ZoO-10-pGd"/>
                         <outlet property="goalsHL1" destination="elb-6y-wC4" id="gKr-HS-FQm"/>
                         <outlet property="goalsHL2" destination="lH4-KI-0g2" id="H21-gk-7Do"/>
                         <outlet property="goalsHL3" destination="9Is-L9-UJd" id="hK0-Xz-bY8"/>
@@ -1347,14 +1347,15 @@
         <image name="iconfinder_Picture13_3289577.png" width="128" height="128"/>
         <image name="iconfinder_dinner-fork-knife-restaurant-dish_3722857.png" width="128" height="128"/>
         <image name="iconfinder_icons_user_1564534.png" width="128" height="128"/>
-        <image name="icons8-customer-filled-50" width="37.5" height="37.5"/>
-        <image name="icons8-dumbbell-50" width="37.5" height="37.5"/>
-        <image name="icons8-exercise-50" width="37.5" height="37.5"/>
-        <image name="icons8-real-estate-50" width="37.5" height="37.5"/>
+        <image name="icons8-customer-filled-50" width="25" height="25"/>
+        <image name="icons8-dumbbell-50" width="25" height="25"/>
+        <image name="icons8-exercise-50" width="25" height="25"/>
+        <image name="icons8-real-estate-50" width="25" height="25"/>
         <image name="profileImg.png" width="512" height="512"/>
-        <image name="purpleeasy" width="1080" height="1080"/>
+        <image name="purpleeasy" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Fh6-F7-Wv9"/>
         <segue reference="5gr-Zp-a4M"/>
         <segue reference="Cvp-QV-10h"/>
         <segue reference="vcY-4n-C8c"/>

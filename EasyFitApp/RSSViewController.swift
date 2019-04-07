@@ -45,7 +45,6 @@ class RSSViewController: UIViewController {
         let result = parser.parse()
         
         guard let feed = result.rssFeed, result.isSuccess else {
-            print(result.error)
             return
         }
         
@@ -54,39 +53,39 @@ class RSSViewController: UIViewController {
         
         var url = URL(string: item!.enclosure!.attributes!.url!)
         var data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        rssButton1.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssButton1.setBackgroundImage(UIImage(data: data!)!, for: .normal)
         rssLabel1.text = item!.title!
         
         //RSS BUTTON2  AND LABEL2
         item = feed.items?[2]
         
         url = URL(string: item!.enclosure!.attributes!.url!)
-        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        rssButton2.setBackgroundImage(UIImage(data: data!), for: .normal)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch›
+        rssButton2.setBackgroundImage(UIImage(data: data!)!, for: .normal)
         rssLabel2.text = item!.title!
     
         //RSS BUTTON3  AND LABEL3
-        item = feed.items?[3]
-        
-        url = URL(string: item!.enclosure!.attributes!.url!)
-        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        rssButton3.setBackgroundImage(UIImage(data: data!), for: .normal)
-        rssLabel3.text = item!.title!
-        
-        //RSS BUTTON4  AND LABEL4
         item = feed.items?[4]
         
         url = URL(string: item!.enclosure!.attributes!.url!)
         data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        rssButton4.setBackgroundImage(UIImage(data: data!), for: .normal)
-        rssLabel4.text = item!.title!
+        rssButton3.setBackgroundImage(UIImage(data: data!)!, for: .normal)
+        rssLabel3.text = item!.title!
         
-        //RSS BUTTON2  AND LABEL2
+        //RSS BUTTON4  AND LABEL4›
         item = feed.items?[5]
         
         url = URL(string: item!.enclosure!.attributes!.url!)
         data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        rssButton5.setBackgroundImage(UIImage(data: data!), for: .normal)
+        rssButton4.setBackgroundImage(UIImage(data: data!)!, for: .normal)
+        rssLabel4.text = item!.title!
+        
+        //RSS BUTTON2  AND LABEL2
+        item = feed.items?[7]
+        
+        url = URL(string: item!.enclosure!.attributes!.url!)
+        data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        rssButton5.setBackgroundImage(UIImage(data: data!)!, for: .normal)
         rssLabel5.text = item!.title!
         
         

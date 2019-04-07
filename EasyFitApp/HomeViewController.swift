@@ -121,14 +121,32 @@ class HomeViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
+//
+//        var welcomeName = ""
+//        if (Auth.auth().currentUser?.displayName) != nil{
+//            welcomeName = (Auth.auth().currentUser?.displayName)!
+//        }
 
-        var welcomeName = ""
-        if (Auth.auth().currentUser?.displayName) != nil{
-            welcomeName = (Auth.auth().currentUser?.displayName)!
+        
+        database_ref.child("users/" + currentUserID + "/personal").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            //Snapshot NSDictionary
+            let value = snapshot.value as? NSDictionary
+            
+            //name
+            let welcomeName = value?["name"] as! String
+            
+            self.welcomeLabel.text = "Welcome " + String(welcomeName)
+            
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
         }
 
+        
         welcomeLabel.adjustsFontSizeToFitWidth = true
-        welcomeLabel.text = "Welcome " + welcomeName
+        
         
 
         

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import Firebase
 import FirebaseUI
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class ProfileViewController: UIViewController {
 
@@ -30,16 +33,16 @@ class ProfileViewController: UIViewController {
     
     
     //CURRENT PROGRESS LABELS
-    @IBOutlet weak var currentProgressMainL: UILabel!
+    @IBOutlet weak var detailsMainL: UILabel!
     
-    @IBOutlet weak var currentProgressL1: UILabel!
-    @IBOutlet weak var currentProgressL2: UILabel!
-    @IBOutlet weak var currentProgressL3: UILabel!
+    @IBOutlet weak var detailsL1: UILabel!
+    @IBOutlet weak var detailsL2: UILabel!
+    @IBOutlet weak var detailsL3: UILabel!
     
             //HEADER LABELS
-    @IBOutlet weak var currentProgressHL1: UILabel!
-    @IBOutlet weak var currentProgressHL2: UILabel!
-    @IBOutlet weak var currentProgressHL3: UILabel!
+    @IBOutlet weak var detailsHL1: UILabel!
+    @IBOutlet weak var detailsHL2: UILabel!
+    @IBOutlet weak var detailsHL3: UILabel!
     
     //GOALS LABELS
     
@@ -61,26 +64,26 @@ class ProfileViewController: UIViewController {
         
         //CURRENT PROGRESS INIT
         
-        currentProgressL1.layer.borderColor = UIColor.black.cgColor
-        currentProgressL1.layer.borderWidth = 4.0
-        currentProgressL1.layer.cornerRadius = 8
+        detailsL1.layer.borderColor = UIColor.black.cgColor
+        detailsL1.layer.borderWidth = 4.0
+        detailsL1.layer.cornerRadius = 8
 
-        currentProgressL2.layer.borderColor = UIColor.black.cgColor
-        currentProgressL2.layer.borderWidth = 4.0
-        currentProgressL2.layer.cornerRadius = 8
+        detailsL2.layer.borderColor = UIColor.black.cgColor
+        detailsL2.layer.borderWidth = 4.0
+        detailsL2.layer.cornerRadius = 8
         
-        currentProgressL3.layer.borderColor = UIColor.black.cgColor
-        currentProgressL3.layer.borderWidth = 4.0
-        currentProgressL3.layer.cornerRadius = 8
+        detailsL3.layer.borderColor = UIColor.black.cgColor
+        detailsL3.layer.borderWidth = 4.0
+        detailsL3.layer.cornerRadius = 8
         
-        currentProgressMainL.text = "CURRENT PROGRESS"
-        
-        
+        detailsMainL.text = "DETAILS"
         
         
-        currentProgressHL1.text = "Weight"
-        currentProgressHL2.text = "Pace"
-        currentProgressHL3.text = "Distance"
+        
+        
+        detailsHL1.text = "Weight"
+        detailsHL2.text = "Height"
+        detailsHL3.text = "Age"
         
         //GOALS INIT
         
@@ -99,8 +102,8 @@ class ProfileViewController: UIViewController {
         goalsMainL.text = "MY GOALS"
         
         
-        var goalsHArray = ["Distance", "Testing"]
-        var goalsVArray = ["Distance", "Testing"]
+        var goalsHArray = ["Distance", "Pace"]
+        var goalsVArray = ["Run 500km", "Average 300m/min"]
     
         for i in 0...2 {
             if goalsVArray.indices.contains(i)
@@ -156,9 +159,10 @@ class ProfileViewController: UIViewController {
         //DATABASE REFERENCE
         var database_ref : DatabaseReference!
         database_ref = Database.database().reference()
-        let currentUser = "1001"
+        let currentUser = Auth.auth().currentUser
+        let currentUserID:String = currentUser!.uid
         
-        database_ref.child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
+        database_ref.child("users/" + currentUserID + "/personal").observeSingleEvent(of: .value, with: { (snapshot) in
             
             
             //Snapshot NSDictionary
@@ -167,27 +171,42 @@ class ProfileViewController: UIViewController {
             //name VALUE
             let nameS = value?["name"] as! String
             
+        
+            let currentWeightS = value?["weight"] as! String
+            let currentHeightS = value?["height"] as! String
+            let currentAgeS = value?["age"] as! String
+            
+            self.nameHeaderLabel.text = nameS
+       
+            self.memberLabel.text = "Member"
+
+            
+            self.detailsL1.text = String(currentWeightS) + "kg"
+            self.detailsL2.text = String(currentHeightS) + "cm"
+            self.detailsL3.text = String(currentAgeS) + "y"
+            
+            
+            })
+        
+        database_ref.child("users/" + currentUserID + "/stats").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            
+            //Snapshot NSDictionary
+            let value = snapshot.value as? NSDictionary
+            
             //lvl VALUE
             let lvlS = value?["lvl"] as! Int
             
             //creation VALUE
-            let creationS = value?["creation"] as! String
+            let creationS = value?["creationDate"] as! String
             
-            let currentWeightS = value?["current_weight"] as! Int
-            let currentDistanceS = value?["current_distance"] as! Int
-            let currentPaceS = value?["current_pace"] as! Double
-            
-            self.nameHeaderLabel.text = nameS
             self.levelHeaderlLabel.text = "Level : " + String(lvlS)
-            self.memberLabel.text = "Member"
             self.joinedHeaderLabel.text = creationS
             
-            self.currentProgressL1.text = String(currentWeightS) + "kg"
-            self.currentProgressL2.text = String(currentPaceS) + "m/s"
-            self.currentProgressL3.text = String(currentDistanceS) + "km"
             
-            
-            })
+        })
+        
+        
     }
         
         

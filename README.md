@@ -1,4 +1,4 @@
 # easyfitapp
 
-This application was created as a group. 
-We h
+This was a group project
+
